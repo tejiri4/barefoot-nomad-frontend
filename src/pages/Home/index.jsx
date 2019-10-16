@@ -1,7 +1,28 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
-export default class Home extends Component {
+// actions
+import { sayHelloAction } from "../../store/actions/sayHelloAction";
+
+class Home extends Component {
+  componentDidMount() {
+    this.props.sayHello();
+  }
+
   render() {
-    return <div>Home</div>;
+    return <div>{this.props.hello.message}</div>;
   }
 }
+
+const mapStateToProps = state => ({ hello: state.hello });
+
+const mapDispachToProps = dispatch => {
+  return {
+    sayHello: () => dispatch(sayHelloAction())
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispachToProps
+)(Home);

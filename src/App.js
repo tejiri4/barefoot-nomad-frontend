@@ -11,8 +11,8 @@ import routes from "./routes";
 const App = () => {
   return (
     <Switch>
-      {routes.map(({ path, component }) => (
-        <Route exact path={path} component={component} />
+      {routes.map(({ path, component }, index) => (
+        <Route exact path={path} component={component} key={index} />
       ))}
     </Switch>
   );
