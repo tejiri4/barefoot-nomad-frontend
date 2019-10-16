@@ -1,0 +1,15 @@
+@import "~sass-rem";
+@import "../../assets/variable.scss";
+
+.button {
+  button {
+    background: linear-gradient(91.98deg, $purple-heart 0%, $dark-orchid 100%);
+    border-radius: rem(6px);
+    padding: rem(10px) rem(8px);
+    width: rem(150px);
+    color: $white;
+    outline: none;
+    border-width: rem(1px);
+    cursor: pointer;
+  }
+}
