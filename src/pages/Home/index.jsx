@@ -1,28 +1,114 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 
-// actions
-import { sayHelloAction } from "../../store/actions/sayHelloAction";
+// styles
+import "./Home.scss";
+
+// components
+import DestinationCard from "../../components/DestinationCard";
+import Button from "../../components/Button";
 
 class Home extends Component {
-  componentDidMount() {
-    this.props.sayHello();
-  }
-
   render() {
-    return <div>{this.props.hello.message}</div>;
+    return (
+      <div className="home">
+        <div className="home__header">
+          <div className="home__header-logo">
+            <img
+              src="https://res.cloudinary.com/store-manager/image/upload/v1571208724/barefoot-nomad/logo.svg"
+              alt="logo"
+            />
+            <span>Barefoot Nomad</span>
+          </div>
+          <div className="home__header-login">
+            <img
+              src="https://res.cloudinary.com/store-manager/image/upload/v1571209634/barefoot-nomad/Login_Icon.svg"
+              alt="login"
+            />
+            <span>Login</span>
+          </div>
+        </div>
+        <div className="home__description">
+          <div className="home__description-left">
+            <h1>Travel with ease</h1>
+            <small>
+              We understand that work could be hectic at times, but travelling
+              should not, with barefoot nomad you can travel anywhere we're
+              located all over the world.
+            </small>
+            <Button text="Get Started" />
+          </div>
+          <div className="home__description-right">
+            <img
+              src="https://res.cloudinary.com/store-manager/image/upload/v1571210471/barefoot-nomad/landingpage-image.svg"
+              alt="landing"
+            />
+          </div>
+        </div>
+        <div className="home__destination">
+          <div className="home__destination-header">
+            <h1>Most Travelled Destination</h1>
+          </div>
+          <div className="home__destination-collection">
+            <DestinationCard
+              title="Oba’s Hut"
+              destinationImage="https://res.cloudinary.com/store-manager/image/upload/v1571213132/barefoot-nomad/destination-image-one.svg"
+              address="St. George street, Kampala, Uganda"
+              likesNo={34}
+              ratingNo={4}
+            />
+
+            <DestinationCard
+              title="Oba’s Hut"
+              destinationImage="https://res.cloudinary.com/store-manager/image/upload/v1571222831/barefoot-nomad/destination-image-two.svg"
+              address="St. George street, Kampala, Uganda"
+              likesNo={34}
+              ratingNo={3}
+            />
+
+            <DestinationCard
+              title="Oba’s Hut"
+              destinationImage="https://res.cloudinary.com/store-manager/image/upload/v1571222832/barefoot-nomad/destination-image-three.svg"
+              address="St. George street, Kampala, Uganda"
+              likesNo={34}
+              ratingNo={2}
+            />
+
+            <DestinationCard
+              title="Oba’s Hut"
+              destinationImage="https://res.cloudinary.com/store-manager/image/upload/v1571222831/barefoot-nomad/destination-image-two.svg"
+              address="St. George street, Kampala, Uganda"
+              likesNo={34}
+              ratingNo={3}
+            />
+
+            <DestinationCard
+              title="Oba’s Hut"
+              destinationImage="https://res.cloudinary.com/store-manager/image/upload/v1571222832/barefoot-nomad/destination-image-three.svg"
+              address="St. George street, Kampala, Uganda"
+              likesNo={34}
+              ratingNo={2}
+            />
+
+            <DestinationCard
+              title="Oba’s Hut"
+              destinationImage="https://res.cloudinary.com/store-manager/image/upload/v1571222831/barefoot-nomad/destination-image-two.svg"
+              address="St. George street, Kampala, Uganda"
+              likesNo={34}
+              ratingNo={3}
+            />
+
+            <DestinationCard
+              title="Oba’s Hut"
+              destinationImage="https://res.cloudinary.com/store-manager/image/upload/v1571222832/barefoot-nomad/destination-image-three.svg"
+              address="St. George street, Kampala, Uganda"
+              likesNo={34}
+              ratingNo={2}
+            />
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 
-const mapStateToProps = state => ({ hello: state.hello });
-
-const mapDispachToProps = dispatch => {
-  return {
-    sayHello: () => dispatch(sayHelloAction())
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispachToProps
-)(Home);
+export default Home;

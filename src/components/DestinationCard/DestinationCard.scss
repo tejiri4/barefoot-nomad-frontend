@@ -1,0 +1,52 @@
+@import "~sass-rem";
+
+.destination {
+  height: rem(238px);
+  padding: rem(0) rem(20px);
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &__image {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content-address {
+    display: flex;
+
+    img {
+      margin-right: rem(12px);
+    }
+
+    p {
+      margin: 0;
+      font-style: normal;
+      font-weight: 500;
+      font-size: rem(10px);
+      line-height: rem(16px);
+    }
+  }
+
+  &__content-like-rating {
+    display: flex;
+    margin-top: rem(10px);
+
+    img {
+      width: rem(11.72px);
+      height: rem(11.79px);
+    }
+
+    span {
+      margin-left: rem(5px);
+      font-style: normal;
+      font-weight: 500;
+      font-size: rem(9px);
+      line-height: rem(11px);
+    }
+  }
+
+  &__content-rating {
+    margin-right: rem(20px);
+  }
+}

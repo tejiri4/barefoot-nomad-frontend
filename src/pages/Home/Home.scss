@@ -1,0 +1,156 @@
+@import "~sass-rem";
+@import "../../assets/mixin.scss";
+@import "../../assets/variable.scss";
+
+.home {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: rem(50px) rem(100px);
+  }
+
+  &__header-logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    img {
+      width: rem(30px);
+      height: rem(30px);
+      margin-right: rem(18.25px);
+      cursor: pointer;
+    }
+
+    span {
+      font-style: normal;
+      font-weight: 600;
+      font-size: rem(14px);
+      line-height: rem(14px);
+      color: $sapphire;
+      cursor: pointer;
+    }
+  }
+
+  &__header-login {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    img {
+      width: rem(18px);
+      height: rem(18px);
+      margin-right: rem(20px);
+    }
+
+    span {
+      font-style: normal;
+      font-weight: 500;
+      font-size: rem(12px);
+      line-height: rem(14px);
+      cursor: pointer;
+    }
+  }
+
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: auto;
+    flex-wrap: wrap;
+    padding: rem(0) rem(100px);
+  }
+
+  &__description-left {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: rem(30px);
+    }
+
+    small {
+      width: rem(354px);
+      font-style: normal;
+      font-weight: 500;
+      font-size: rem(13px);
+      line-height: 120%;
+      margin-bottom: rem(20px);
+    }
+  }
+
+  &__destination-collection {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    padding: rem(0) rem(80px);
+  }
+
+  &__content-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: rem(18px);
+    line-height: rem(21px);
+    background: $black-russian;
+  }
+
+  &__description-right {
+    img {
+      width: rem(462px);
+      height: rem(521px);
+    }
+  }
+
+  &__destination-header {
+    padding: rem(0) rem(100px);
+
+    h1 {
+      font-size: rem(25px);
+    }
+  }
+
+  @include lg {
+    &__header {
+      padding: rem(50px) rem(50px);
+    }
+
+    &__description {
+      padding: rem(0) rem(50px);
+    }
+
+    &__destination-header {
+      padding: rem(0) rem(50px);
+    }
+
+    &__destination-collection {
+      padding: rem(0) rem(30px);
+    }
+
+    &__description-right {
+      img {
+        width: rem(300px);
+        height: rem(300px);
+      }
+    }
+
+    &__description-left {
+      small {
+        width: rem(280px);
+      }
+    }
+  }
+
+  @include sm {
+    &__description-right {
+      img {
+        width: rem(200px);
+        height: rem(200px);
+      }
+    }
+
+    &__description-left {
+      small {
+        width: rem(230px);
+      }
+    }
+  }
+}
