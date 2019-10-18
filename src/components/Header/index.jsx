@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // styles
-import "./Header.scss";
+import './Header.scss';
 
 export default function index() {
   return (
