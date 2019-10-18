@@ -1,6 +1,6 @@
 import Modal from "react-modal";
 import React, { Component } from "react";
-import { withRouter } from "react-router";
+import { withRouter } from "react-router-dom";
 
 // styles
 import "./AppModal.scss";
