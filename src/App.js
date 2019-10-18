@@ -1,6 +1,6 @@
 // react libraries
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 // styles
 import "./App.css";
@@ -10,11 +10,11 @@ import routes from "./routes";
 
 const App = () => {
   return (
-    <Switch>
-      {routes.map(({ path, component }, index) => (
-        <Route exact path={path} component={component} key={index} />
+    <>
+      {routes.map(({ path, component, exact }, index) => (
+        <Route exact={exact} path={path} component={component} key={index} />
       ))}
-    </Switch>
+    </>
   );
 };
 

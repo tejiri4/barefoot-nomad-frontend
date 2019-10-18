@@ -4,12 +4,42 @@ import React from "react";
 // styles
 import "./Button.scss";
 
-const Button = ({ text }) => {
+export const Button = ({ text, handleClick }) => {
   return (
-    <div className="button">
-      <button>{text}</button>
+    <div className="btn">
+      <button className="btn__primary" type="submit" onClick={handleClick}>
+        {text}
+      </button>
     </div>
   );
 };
 
-export default Button;
+export const GoogleButton = () => {
+  return (
+    <div className="btn">
+      <button className="btn__google">
+        <div>
+          <img
+            src="https://res.cloudinary.com/store-manager/image/upload/v1571293525/barefoot-nomad/Google_Icon.svg"
+            alt="google"
+          />
+        </div>
+        <div>Google</div>
+      </button>
+    </div>
+  );
+};
+
+export const FacebookButton = () => {
+  return (
+    <div className="btn">
+      <button className="btn__facebook">
+        <img
+          src="https://res.cloudinary.com/store-manager/image/upload/v1571293525/barefoot-nomad/facebook.svg"
+          alt="facebook"
+        />
+        Facebook
+      </button>
+    </div>
+  );
+};

@@ -1,0 +1,45 @@
+@import "~sass-rem";
+@import "../../assets/variable.scss";
+
+.sign-up-form {
+  padding: rem(5px) rem(40px);
+
+  &__title {
+    h1 {
+      font-size: rem(15px);
+      color: $purple-heart;
+      font-style: normal;
+      font-weight: 600;
+      line-height: rem(38px);
+    }
+  }
+
+  &__social-login {
+    display: flex;
+    button:nth-child(1) {
+      margin-right: rem(10px);
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    div {
+      input:nth-child(1) {
+        margin-right: rem(10px);
+      }
+    }
+
+    input:nth-child(5) {
+      margin-bottom: rem(25px);
+    }
+  }
+
+  p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: rem(10px);
+    line-height: rem(21px);
+  }
+}

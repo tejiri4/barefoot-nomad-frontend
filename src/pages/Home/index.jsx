@@ -5,7 +5,7 @@ import "./Home.scss";
 
 // components
 import DestinationCard from "../../components/DestinationCard";
-import Button from "../../components/Button";
+import { Button } from "../../components/Button";
 
 class Home extends Component {
   render() {
@@ -35,7 +35,10 @@ class Home extends Component {
               should not, with barefoot nomad you can travel anywhere we're
               located all over the world.
             </small>
-            <Button text="Get Started" />
+            <Button
+              text="Get Started"
+              handleClick={() => this.props.history.push("/signup")}
+            />
           </div>
           <div className="home__description-right">
             <img

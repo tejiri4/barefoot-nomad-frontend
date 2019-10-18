@@ -1,8 +1,8 @@
 @import "~sass-rem";
 @import "../../assets/variable.scss";
 
-.button {
-  button {
+.btn {
+  &__primary {
     background: linear-gradient(91.98deg, $purple-heart 0%, $dark-orchid 100%);
     border-radius: rem(6px);
     padding: rem(10px) rem(8px);
@@ -11,5 +11,54 @@
     outline: none;
     border-width: rem(1px);
     cursor: pointer;
+  }
+
+  
+  &__facebook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $cerulean-blue;
+    border-radius: rem(4px);
+    color: $white;
+    outline: none;
+    cursor: pointer;
+    border-width: rem(1px);
+    width: rem(110px);
+    padding: rem(4px) 0;
+
+    img {
+      width: rem(20px);
+      height: rem(20px);
+      margin-right: rem(10px);
+    }
+  }
+
+  &__google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background: $white;
+    border-radius: rem(4px);
+    border: rem(1.5px) solid $summer-sky;
+    width: rem(110px);
+
+    div:nth-child(1) {
+      padding: rem(5px);
+
+      img {
+        width: rem(15px);
+        height: rem(15px);
+      }
+    }
+
+    div:nth-child(2) {
+      background: $summer-sky;
+      color: $white;
+      text-align: center;
+      padding: rem(7.5px) rem(7.5px);
+      width: rem(200px);
+    }
   }
 }

@@ -1,0 +1,14 @@
+@import "~sass-rem";
+@import "../../assets/variable.scss";
+
+.input {
+  background: $white-smoke;
+  border-radius: rem(5px);
+  border: 1px solid $white-smoke;
+  padding: rem(10px) rem(15px);
+  outline: none;
+  font-size: rem(11px);
+  font-style: normal;
+  font-weight: 500;
+  margin-top: rem(10px);
+}
