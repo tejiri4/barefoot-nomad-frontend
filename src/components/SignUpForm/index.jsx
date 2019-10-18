@@ -25,14 +25,14 @@ const SignUpForm = () => {
               type="text"
               placeholder="First name"
               className="input"
-              style={{ width: "80px" }}
+              style={{ width: "5.25rem" }}
               required={true}
             />
             <Input
               type="text"
               placeholder="Last name"
               className="input"
-              style={{ width: "80px" }}
+              style={{ width: "5.25rem" }}
               required={true}
             />
           </div>
