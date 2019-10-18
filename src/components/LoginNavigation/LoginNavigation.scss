@@ -1,0 +1,47 @@
+@import "~sass-rem";
+@import "../../assets/variable.scss";
+@import "../../assets/mixin.scss";
+
+.login-navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $white-smoke;
+
+  h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(20px);
+    display: flex;
+    align-items: center;
+    padding: rem(30px);
+    width: rem(150px);
+    background: -webkit-linear-gradient(91.56deg, #4d17c0 0%, #ab1ac2 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  small {
+    font-style: normal;
+    font-weight: 500;
+    font-size: rem(12px);
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    width: rem(150px);
+    background: -webkit-linear-gradient(91.56deg, #4d17c0 0%, #ab1ac2 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  img {
+    width: rem(150px);
+    height: rem(150px);
+    padding: 0 rem(120px) 0 rem(40px);
+  }
+
+  @include sm {
+    display: none;
+  }
+}
