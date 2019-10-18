@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom'
 
+//components
+import Header from '../../components/Header';
+
 // styles
 import "./Home.scss";
 
@@ -15,6 +18,7 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
+<<<<<<< HEAD
         <div className="home__header">
           <div className="home__header-logo">
             <img
@@ -33,6 +37,9 @@ class Home extends Component {
             </Link>
           </div>
         </div>
+=======
+        <Header/>
+>>>>>>> implement not found page and adjust reset password
         <div className="home__description">
           <div className="home__description-left">
             <h1>Travel with ease</h1>

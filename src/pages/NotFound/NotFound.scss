@@ -1,0 +1,36 @@
+@import "~sass-rem";
+@import "../../assets/mixin.scss";
+@import "../../assets/variable.scss";
+
+.not-found {
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left;
+      margin-right: 200px;
+
+      h1 {
+        color: #ab1ac2;
+        font-size: 3rem;
+      }
+
+      p {
+        margin-bottom: 60px;
+      }
+    }
+
+    &__right {
+      img {
+        width: 500px;
+        height: 500px;
+        padding: 80px 0;
+      }
+    }
+  }
+}

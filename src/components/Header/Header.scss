@@ -1,0 +1,51 @@
+@import "~sass-rem";
+@import "../../assets/mixin.scss";
+@import "../../assets/variable.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: rem(50px) rem(100px);
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    img {
+      width: rem(30px);
+      height: rem(30px);
+      margin-right: rem(18.25px);
+      cursor: pointer;
+    }
+
+    span {
+      font-style: normal;
+      font-weight: 600;
+      font-size: rem(14px);
+      line-height: rem(14px);
+      color: $sapphire;
+      cursor: pointer;
+    }
+  }
+
+  &__login {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    img {
+      width: rem(18px);
+      height: rem(18px);
+      margin-right: rem(20px);
+    }
+
+    span {
+      font-style: normal;
+      font-weight: 500;
+      font-size: rem(12px);
+      line-height: rem(14px);
+      cursor: pointer;
+    }
+  }
+}

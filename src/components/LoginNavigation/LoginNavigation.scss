@@ -6,17 +6,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding-left: rem(40px);
+  // align-items: center;
   background: $white-smoke;
 
   h1 {
     font-style: normal;
     font-weight: bold;
-    font-size: rem(20px);
+    color: #ab1ac2;
+    font-size: rem(36px);
     display: flex;
     align-items: center;
-    padding: rem(30px);
-    width: rem(150px);
+    padding: rem(0px 0px);
+    width: rem(200px);
     background: -webkit-linear-gradient(91.56deg, $purple-heart 0%, $dark-orchid 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -24,6 +26,7 @@
 
   small {
     font-style: normal;
+    color: #ab1ac2;
     font-weight: 500;
     font-size: rem(12px);
     line-height: 120%;
@@ -42,7 +45,7 @@
   img {
     width: rem(150px);
     height: rem(150px);
-    padding: 0 rem(120px) 0 rem(40px);
+    padding: 0 rem(160px) 0 rem(0px);
   }
 
   @include md {

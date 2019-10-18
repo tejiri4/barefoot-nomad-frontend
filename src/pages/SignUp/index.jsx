@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 
-// styles
-import AppModal from "./../../components/AppModal";
-
 // components
 import LoginNavigation from './../../components/LoginNavigation';
 import SignUpForm from './../../components/SignUpForm';
+import AppModal from "./../../components/AppModal";
 
 class SignUp extends Component {
   render() {
