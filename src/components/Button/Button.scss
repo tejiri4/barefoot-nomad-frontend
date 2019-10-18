@@ -11,6 +11,7 @@
     outline: none;
     border-width: rem(1px);
     cursor: pointer;
+    font-size: rem(10px);
   }
 
   
@@ -24,8 +25,7 @@
     outline: none;
     cursor: pointer;
     border-width: rem(1px);
-    width: rem(110px);
-    padding: rem(4px) 0;
+    padding: rem(4px) 14px;
 
     img {
       width: rem(20px);
@@ -42,7 +42,7 @@
     background: $white;
     border-radius: rem(4px);
     border: rem(1.5px) solid $summer-sky;
-    width: rem(110px);
+    width: rem(115px);
 
     div:nth-child(1) {
       padding: rem(5px);

@@ -17,7 +17,7 @@
     align-items: center;
     padding: rem(30px);
     width: rem(150px);
-    background: -webkit-linear-gradient(91.56deg, #4d17c0 0%, #ab1ac2 100%);
+    background: -webkit-linear-gradient(91.56deg, $purple-heart 0%, $dark-orchid 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
     width: rem(150px);
-    background: -webkit-linear-gradient(91.56deg, #4d17c0 0%, #ab1ac2 100%);
+    background: -webkit-linear-gradient(91.56deg, $purple-heart 0%, $dark-orchid 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }

@@ -1,5 +1,6 @@
 import Home from "../pages/Home";
 import SignUp from '../pages/SignUp';
+import ForgotPassword from './../pages/ForgotPassword/index';
 
 const routes = [
   {
@@ -10,7 +11,12 @@ const routes = [
   {
     path: "/signup",
     component: SignUp,
-    exact: false
+    exact: true
+  },
+  {
+    path: "/forgot-password",
+    component: ForgotPassword,
+    exact: true
   }
 ];
 
