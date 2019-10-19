@@ -8,7 +8,11 @@ import Login from './../pages/Login/index';
 import SignUp from "../pages/SignUp";
 import ForgotPassword from "./../pages/ForgotPassword/index";
 import ResetPassword from "./../pages/ResetPassword/index";
+<<<<<<< HEAD
 >>>>>>> implement not found page and adjust reset password
+=======
+import Login from './../pages/Login/index';
+>>>>>>> implement login
 
 
 const routes =  [
