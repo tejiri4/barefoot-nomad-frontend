@@ -1,5 +1,6 @@
 // react libraries
 import React from "react";
+import { Link } from 'react-router-dom'
 
 // styles
 import "./SignUpForm.scss";
@@ -62,7 +63,9 @@ const SignUpForm = () => {
           />
           <Button text="Sign up" />
         </form>
-        <p>Already have an account? Login here</p>
+        <Link className="sign-up-form__link" to="/login">
+          <p>Already have an account? Login here</p>
+        </Link>
       </div>
     </div>
   );

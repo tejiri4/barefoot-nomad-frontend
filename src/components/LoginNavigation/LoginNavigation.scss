@@ -35,6 +35,10 @@
     -webkit-text-fill-color: transparent;
   }
 
+  &__link {
+    text-decoration: none;
+  }
+
   img {
     width: rem(150px);
     height: rem(150px);

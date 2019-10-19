@@ -2,6 +2,7 @@ import Home from "../pages/Home";
 import SignUp from '../pages/SignUp';
 import ForgotPassword from './../pages/ForgotPassword/index';
 import ResetPassword from './../pages/ResetPassword/index';
+import Login from './../pages/Login/index';
 
 const routes = [
   {
@@ -23,7 +24,12 @@ const routes = [
     path: "/reset-password",
     component: ResetPassword,
     exact: true
-  }
+  },
+  {
+    path: "/login",
+    component: Login,
+    exact: true
+  },
 ];
 
 export default routes;

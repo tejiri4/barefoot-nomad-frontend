@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom'
 
 // styles
 import "./Home.scss";
@@ -24,7 +25,9 @@ class Home extends Component {
               src="https://res.cloudinary.com/store-manager/image/upload/v1571209634/barefoot-nomad/Login_Icon.svg"
               alt="login"
             />
-            <span>Login</span>
+            <Link className="home__link" to="/login">
+              <span>Login</span>
+            </Link>
           </div>
         </div>
         <div className="home__description">
