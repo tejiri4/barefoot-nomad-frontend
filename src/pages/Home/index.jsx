@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom'
 // styles
 import "./Home.scss";
 
+// external libraries
+import PropTypes from 'prop-types'; 
+
 // components
 import DestinationCard from "../../components/DestinationCard";
 import { Button } from "../../components/Button";
@@ -115,6 +118,12 @@ class Home extends Component {
       </div>
     );
   }
+}
+
+Home.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired
+  }).isRequired,
 }
 
 export default Home;

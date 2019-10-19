@@ -45,7 +45,7 @@
     padding: 0 rem(120px) 0 rem(40px);
   }
 
-  @include sm {
+  @include md {
     display: none;
   }
 }

@@ -1,6 +1,9 @@
 // react libraries
 import React from "react";
 
+// external libraries
+import PropTypes from 'prop-types'; 
+
 // styles
 import "./DestinationCard.scss";
 
@@ -59,5 +62,13 @@ const DestinationCard = ({
     </div>
   );
 };
+
+DestinationCard.propTypes = {
+  title: PropTypes.string,
+  address: PropTypes.string,
+  destinationImage: PropTypes.string,
+  likesNo: PropTypes.number,
+  ratingNo: PropTypes.number
+}
 
 export default DestinationCard;
