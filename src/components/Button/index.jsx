@@ -1,6 +1,9 @@
 // react libraries
 import React from "react";
 
+// external libraries
+import PropTypes from 'prop-types'; 
+
 // styles
 import "./Button.scss";
 
@@ -43,3 +46,8 @@ export const FacebookButton = () => {
     </div>
   );
 };
+
+Button.propTypes = {
+  text: PropTypes.string,
+  handleClick: PropTypes.func
+}
