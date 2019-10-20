@@ -1,0 +1,103 @@
+@import "~sass-rem";
+@import "../../assets/mixin.scss";
+@import "../../assets/variable.scss";
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: rem(50px);
+  width: rem(85%);
+  padding: rem(15px) rem(30px);
+
+  &__hamburger {
+    display: none;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: rem(25px);
+    line-height: rem(38px);
+    color: $custom-black;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: rem(150px);
+
+    &__notification {
+      position: relative;
+      cursor: pointer;
+    }
+
+    &__notification-icon {
+      img {
+        width: rem(25px);
+        height: rem(25px);
+      }
+    }
+
+    &__notification-count {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: rem(10px);
+      height: rem(10px);
+      padding: rem(2px);
+      top: 0;
+      right: 0;
+      background: $harley-davidson-orange;
+      border-radius: 50%;
+      color: $white;
+      font-size: rem(10px);
+    }
+
+    &__profile_photo {
+      position: relative;
+      background-color: $custom-black;
+      border-radius: 50%;
+      width: rem(40px);
+      height: rem(40px);
+      cursor: pointer;
+
+      img {
+        width: rem(100%);
+        height: rem(100%);
+        border-radius: 50%;
+      }
+    }
+
+    &__search {
+      cursor: pointer;
+
+      img {
+        width: rem(17px);
+        height: rem(17px);
+      }
+    }
+  }
+
+  @include md {
+    position: absolute;
+    padding: 0;
+    left: rem(20px);
+    top: rem(10px);
+
+    &__title {
+      font-size: rem(17px);
+    }
+
+    &__hamburger {
+      display: block;
+
+      img {
+        width: rem(20px);
+        height: rem(20px);
+      }
+    }
+  }
+}

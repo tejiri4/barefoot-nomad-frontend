@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom'
+
+//components
+import Header from "../../components/Header";
 
 // styles
 import "./Home.scss";
 
 // external libraries
-import PropTypes from 'prop-types'; 
+import PropTypes from "prop-types";
 
 // components
 import DestinationCard from "../../components/DestinationCard";
@@ -15,24 +17,7 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        <div className="home__header">
-          <div className="home__header-logo">
-            <img
-              src="https://res.cloudinary.com/store-manager/image/upload/v1571208724/barefoot-nomad/logo.svg"
-              alt="logo"
-            />
-            <span>Barefoot Nomad</span>
-          </div>
-          <div className="home__header-login">
-            <img
-              src="https://res.cloudinary.com/store-manager/image/upload/v1571209634/barefoot-nomad/Login_Icon.svg"
-              alt="login"
-            />
-            <Link className="home__link" to="/login">
-              <span>Login</span>
-            </Link>
-          </div>
-        </div>
+        <Header />
         <div className="home__description">
           <div className="home__description-left">
             <h1>Travel with ease</h1>
@@ -123,7 +108,7 @@ class Home extends Component {
 Home.propTypes = {
   history: PropTypes.shape({
     push: PropTypes.func.isRequired
-  }).isRequired,
-}
+  }).isRequired
+};
 
 export default Home;

@@ -1,6 +1,6 @@
 // react libraries
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, withRouter, Switch } from "react-router-dom";
 
 // styles
 import "./App.css";
@@ -8,14 +8,35 @@ import "./App.css";
 // routes
 import routes from "./routes";
 
-const App = () => {
+// components
+import Home from "./pages/Home/index";
+import NotFound from "./pages/NotFound/index";
+import Dashboard from "./pages/Dashboard/index";
+
+const App = ({ history }) => {
   return (
     <>
       {routes.map(({ path, component, exact }, index) => (
         <Route exact={exact} path={path} component={component} key={index} />
       ))}
+      <Switch>
+        <Route
+          exact={
+            ![
+              "/signup",
+              "/login",
+              "/reset-password",
+              "/forgot-password"
+            ].includes(history.location.pathname)
+          }
+          path="/"
+          component={Home}
+        />
+        <Route exact={false} path="/dashboard" component={Dashboard} />
+        <Route component={NotFound} />
+      </Switch>
     </>
   );
 };
 
-export default App;
+export default withRouter(App);
