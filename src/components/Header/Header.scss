@@ -40,6 +40,10 @@
       margin-right: rem(20px);
     }
 
+    a {
+      color: $black-russian;
+    }
+
     span {
       font-style: normal;
       font-weight: 500;
@@ -47,5 +51,9 @@
       line-height: rem(14px);
       cursor: pointer;
     }
+  }
+
+  @include lg {
+    padding: rem(10px) rem(50px);
   }
 }
