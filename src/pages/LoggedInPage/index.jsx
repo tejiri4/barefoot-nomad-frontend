@@ -1,17 +1,14 @@
 // react libraries
 import React, { useState, useEffect } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Switch, Route, Redirect } from "react-router-dom";
 
 // styles
 import "./LoggedInPage.scss";
 
 // components
 import SideNav from "../../components/SideNav";
-import DashboardHeader from "../../components/DashboardHeader";
+import LoggedInHeader from "../../components/LoggedInHeader";
 import Dashboard from "../Dashboard/index";
-
-// fixtures
-import dashboardLinks from "../../components/SideNav/fixtures";
 
 const LoggedInPage = ({ history }) => {
   const [showSideNav, setShowSideNav] = useState(false);
@@ -32,35 +29,25 @@ const LoggedInPage = ({ history }) => {
 
   const handleNameChange = name => setPageName(name);
 
-  const renderRedirect = () => {
-    let isPathValid = false;
-    dashboardLinks.forEach(({ path }) => {
-      if (path.includes(history.location.pathname)) {
-        isPathValid = true;
-      }
-    });
-    if (!isPathValid) {
-      history.push("/404");
-    }
-  };
-
   return (
     <>
-      <div className="logged-in">
-        {renderRedirect()}
+      <div className="logged-in-page">
         <SideNav
           showSideNav={showSideNav}
           handleShowSideNav={handleShowSideNav}
           handleNameChange={handleNameChange}
         />
-        <div className="logged-in__content">
-          <DashboardHeader
+        <div className="logged-in-page__content">
+          <LoggedInHeader
             showSideNav={showSideNav}
             handleShowSideNav={handleShowSideNav}
             pageName={pageName}
           />
-          <div className="logged-in__dashboard">
-            {currentPath === "/dashboard" && <Dashboard />}
+          <div className="logged-in-page__components">
+            <Switch>
+              <Route exact path="/dashboard" component={Dashboard} />
+              <Redirect to="/404" />
+            </Switch>
           </div>
         </div>
       </div>
