@@ -1,0 +1,28 @@
+@import "../../assets/mixin.scss";
+@import "~sass-rem";
+
+.logged-in {
+  display: flex;
+
+  &__content {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__dashboard {
+    padding: 0 rem(30px);
+  }
+
+  @include md {
+    &__content {
+      position: absolute;
+    }
+
+    &__dashboard {
+      padding: 0 rem(20px);
+      position: relative;
+      top: rem(70px);
+    }
+  }
+}

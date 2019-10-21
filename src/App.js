@@ -11,6 +11,7 @@ import routes from "./routes";
 // components
 import Home from "./pages/Home/index";
 import NotFound from "./pages/NotFound/index";
+import LoggedInPage from "./pages/LoggedInPage/index";
 
 const App = ({ history }) => {
   return (
@@ -31,6 +32,7 @@ const App = ({ history }) => {
           path="/"
           component={Home}
         />
+        <Route exact={false} path="/dashboard" component={LoggedInPage} />
         <Route component={NotFound} />
       </Switch>
     </>

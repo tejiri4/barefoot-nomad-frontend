@@ -1,6 +1,9 @@
 // react libraries
 import React from "react";
 
+// external libraries
+import PropTypes from 'prop-types'; 
+
 // styles
 import "./Input.scss";
 
@@ -16,5 +19,13 @@ const Input = ({ type, placeholder, style, required, handleOnChange }) => {
       />
   );
 };
+
+Input.propTypes = {
+  type: PropTypes.string,
+  placeholder: PropTypes.string,
+  style: PropTypes.object,
+  required: PropTypes.bool,
+  handleOnChange: PropTypes.func
+}
 
 export default Input;

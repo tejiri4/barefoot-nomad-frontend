@@ -1,0 +1,68 @@
+@import "~sass-rem";
+@import "../../assets/mixin.scss";
+@import "../../assets/variable.scss";
+
+.side-nav {
+  .active {
+    background: linear-gradient(92.12deg, $purple-heart 0%, $dark-orchid 100%);
+  }
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: rem(200px);
+  background: $black-rock;
+  z-index: 1;
+  height: 100vh;
+
+  &__logo {
+    margin: rem(25px) rem(25px) rem(40px) rem(30px);
+
+    img {
+      width: rem(50px);
+      height: rem(50px);
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      display: flex;
+      padding: rem(15px) rem(30px);
+      color: $white;
+      font-style: normal;
+      font-weight: 500;
+      font-size: rem(15px);
+      line-height: 120%;
+      text-decoration: none;
+
+      img {
+        height: rem(16px);
+        width: rem(16px);
+        margin-right: rem(20px);
+      }
+    }
+  }
+
+  @include md {
+    &__links {
+      a {
+        font-size: rem(16px);
+      }
+    }
+
+    &__translate-right {
+      transition-timing-function: ease-in;
+      transition: 0.8s;
+      transform: translateX(0px);
+    }
+
+    &__translate-left {
+      transition-timing-function: ease-out;
+      transition: 0.8s;
+      transform: translateX(-300px);
+    }
+  }
+}

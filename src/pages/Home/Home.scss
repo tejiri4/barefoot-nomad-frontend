@@ -48,6 +48,7 @@
       font-size: rem(12px);
       line-height: rem(14px);
       cursor: pointer;
+      text-decoration: none;
     }
   }
 
@@ -106,6 +107,10 @@
     h1 {
       font-size: rem(25px);
     }
+  }
+
+  &__link {
+    text-decoration: none;
   }
 
   @include lg {

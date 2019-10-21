@@ -1,5 +1,6 @@
 // react libraries
 import React from "react";
+import { Link } from 'react-router-dom'
 
 // styles
 import './LoginNavigation.scss';
@@ -12,7 +13,9 @@ const LoginNavigation = () => {
         alt="globe"
       />
       <h1>Travelling made easy</h1>
-      <small>Login to access your account</small>
+      <Link className="login-navigation__link" to="/login">
+        <small>Login to access your account</small>
+      </Link>
     </div>
   );
 };

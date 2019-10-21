@@ -1,8 +1,8 @@
 @import "~sass-rem";
 @import "../../assets/variable.scss";
 
-.sign-up-form {
-  padding: rem(5px) rem(40px);
+.login-form {
+  padding: rem(80px) rem(40px);
 
   &__title {
     h1 {
@@ -21,19 +21,29 @@
     }
   }
 
+  &__text {
+    display: flex;
+    justify-content: space-between;
+  }
+
   form {
     display: flex;
     flex-direction: column;
-
-    div {
-      input:nth-child(1) {
-        margin-right: rem(10px);
+      input {
+        margin-top: rem(20px);
       }
-    }
 
-    input:nth-child(5) {
-      margin-bottom: rem(25px);
-    }
+      input:nth-child(1){
+        margin-top: rem(40px);
+      }
+
+      input:nth-child(2){
+        margin-bottom: rem(20px);
+      }
+
+      button {
+        margin-top: rem(20px);
+      }
   }
 
   p {
