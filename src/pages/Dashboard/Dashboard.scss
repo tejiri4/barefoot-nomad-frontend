@@ -1,0 +1,25 @@
+@import "~sass-rem";
+@import "../../assets/mixin.scss";
+@import "../../assets/variable.scss";
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  justify-content: space-between;
+    &__pending-trips {
+      color: #FBBC05;
+    }
+
+    &__approved-trips {
+      color: #47E6B1;
+    }
+
+    &__declined-trips {
+      color: #EB4335;
+    }
+
+    &__total-trips {
+      color: #1D1C1C;
+    }
+}
