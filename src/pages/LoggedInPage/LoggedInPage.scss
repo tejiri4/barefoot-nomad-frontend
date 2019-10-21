@@ -1,7 +1,7 @@
 @import "../../assets/mixin.scss";
 @import "~sass-rem";
 
-.logged-in {
+.logged-in-page {
   display: flex;
 
   &__content {
@@ -10,7 +10,7 @@
     flex-direction: column;
   }
 
-  &__dashboard {
+  &__components {
     padding: 0 rem(30px);
   }
 
@@ -19,7 +19,7 @@
       position: absolute;
     }
 
-    &__dashboard {
+    &__components {
       padding: 0 rem(20px);
       position: relative;
       top: rem(70px);
