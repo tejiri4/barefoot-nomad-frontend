@@ -5,21 +5,20 @@
 .dashboard {
   display: flex;
   flex-wrap: wrap;
-  width: 95%;
   justify-content: space-between;
-    &__pending-trips {
-      color: #FBBC05;
-    }
+  &__pending-trips {
+    color: #fbbc05;
+  }
 
-    &__approved-trips {
-      color: #47E6B1;
-    }
+  &__approved-trips {
+    color: #47e6b1;
+  }
 
-    &__declined-trips {
-      color: #EB4335;
-    }
+  &__declined-trips {
+    color: #eb4335;
+  }
 
-    &__total-trips {
-      color: #1D1C1C;
-    }
+  &__total-trips {
+    color: #1d1c1c;
+  }
 }

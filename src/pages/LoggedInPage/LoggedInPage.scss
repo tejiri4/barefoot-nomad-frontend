@@ -3,7 +3,7 @@
 
 .logged-in-page {
   display: flex;
-  background: #F8F8F8;
+  background: #f8f8f8;
 
   &__content {
     width: 95%;
@@ -12,18 +12,19 @@
   }
 
   &__components {
+    width: auto;
     padding: rem(30px) rem(30px);
   }
 
   @include md {
     &__content {
       position: absolute;
+      width: 100%;
     }
 
     &__components {
       padding: rem(30px) rem(20px);
       position: relative;
-      top: rem(70px);
     }
   }
 }

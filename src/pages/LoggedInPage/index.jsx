@@ -8,7 +8,8 @@ import "./LoggedInPage.scss";
 // components
 import SideNav from "../../components/SideNav";
 import LoggedInHeader from "../../components/LoggedInHeader";
-import Dashboard from "../Dashboard/index";
+import Dashboard from "../Dashboard";
+import Trips from "./../Trips/index";
 
 const LoggedInPage = ({ history }) => {
   const [showSideNav, setShowSideNav] = useState(false);
@@ -44,10 +45,13 @@ const LoggedInPage = ({ history }) => {
             pageName={pageName}
           />
           <div className="logged-in-page__components">
-            <Switch>
-              <Route exact path="/dashboard" component={Dashboard} />
-              <Redirect to="/404" />
-            </Switch>
+            <>
+              <Switch>
+                <Route exact path="/dashboard/trips" component={Trips} />
+                <Route exact path="/dashboard" component={Dashboard} />
+                <Redirect to="/404" />
+              </Switch>
+            </>
           </div>
         </div>
       </div>
