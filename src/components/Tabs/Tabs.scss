@@ -1,0 +1,43 @@
+@import "~sass-rem";
+@import "../../assets/variable.scss";
+
+.tabs {
+  display: flex;
+
+  .active {
+    background: -webkit-linear-gradient(
+      90.58deg,
+      $purple-heart 0%,
+      $dark-orchid 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &__tab {
+    position: relative;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(15px);
+    line-height: rem(26px);
+    margin: rem(10px);
+    color: $custom-black;
+    cursor: pointer;
+
+    &__underline {
+      position: absolute;
+      width: 100%;
+      height: rem(1.5px);
+      background: linear-gradient(
+        90.58deg,
+        $purple-heart 0%,
+        $dark-orchid 100%
+      );
+      border-radius: rem(20px);
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import "~sass-rem";
+@import "../../assets/variable.scss";
+
+.trips {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap-reverse;
+
+  &__new-request {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

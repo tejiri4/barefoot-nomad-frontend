@@ -14,7 +14,6 @@
     font-size: rem(10px);
   }
 
-  
   &__facebook {
     display: flex;
     justify-content: center;
@@ -61,5 +60,24 @@
       padding: rem(7.5px) rem(7.5px);
       width: rem(200px);
     }
+  }
+
+  &__basic {
+    background: -webkit-linear-gradient(
+      90.58deg,
+      $purple-heart 0%,
+      $dark-orchid 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    outline: none;
+    cursor: pointer;
+    border-radius: rem(6px);
+    padding: rem(6px) rem(30px);
+    border: rem(1.5px) solid $dark-orchid;
+    font-style: normal;
+    font-weight: 500;
+    font-size: rem(15px);
+    line-height: rem(23px);
   }
 }

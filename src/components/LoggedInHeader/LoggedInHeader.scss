@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   height: rem(50px);
-  width: rem(90%);
+  width: auto;
   padding: rem(15px) rem(30px);
 
   &__hamburger {
@@ -82,10 +82,7 @@
   }
 
   @include md {
-    position: absolute;
-    padding: 0;
-    left: rem(20px);
-    top: rem(10px);
+    padding: rem(10px) rem(30px);
 
     &__title {
       font-size: rem(17px);
