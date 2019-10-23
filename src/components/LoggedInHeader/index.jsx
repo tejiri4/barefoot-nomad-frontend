@@ -8,7 +8,9 @@ import PropTypes from "prop-types";
 // styles
 import "./LoggedInHeader.scss";
 
-const LoggedInHeader = ({ showSideNav, handleShowSideNav, pageName }) => {
+import Notification from '../../components/NotificationCard';
+
+const LoggedInHeader = ({ showSideNav, handleShowSideNav, showNotification, handleShowNotification, pageName }) => {
   return (
     <div className="logged-in-header">
       <div className="logged-in-header__title">{pageName}</div>
@@ -16,7 +18,7 @@ const LoggedInHeader = ({ showSideNav, handleShowSideNav, pageName }) => {
         <div className="logged-in-header__content__search">
           <FiSearch />
         </div>
-        <div className="logged-in-header__content__notification">
+        <div className="logged-in-header__content__notification" onClick={handleShowNotification}>
           <div className="logged-in-header__content__notification-icon">
             <FiBell />
           </div>
@@ -51,7 +53,9 @@ const LoggedInHeader = ({ showSideNav, handleShowSideNav, pageName }) => {
 LoggedInHeader.propTypes = {
   showSideNav: PropTypes.bool,
   handleShowSideNav: PropTypes.func,
-  pageName: PropTypes.string
+  pageName: PropTypes.string,
+  handleShowNotification: PropTypes.func,
+  showNotification: PropTypes.bool
 };
 
 export default LoggedInHeader;

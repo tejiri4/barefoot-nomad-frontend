@@ -1,0 +1,10 @@
+@import "~sass-rem";
+@import "../../assets/mixin.scss";
+@import "../../assets/variable.scss";
+
+
+.notification-page {
+    width: rem(440px);
+    height: rem(300px);
+    background-color: white;
+}
