@@ -2,28 +2,36 @@
 @import "../../assets/variable.scss";
 
 .sign-up-form {
-  padding: rem(5px) rem(40px);
+  flex: 1;
+  padding: 3rem 3rem;
 
   &__title {
     h1 {
-      font-size: rem(15px);
+      font-size: 1.13rem;
       color: $purple-heart;
       font-style: normal;
       font-weight: 600;
-      line-height: rem(38px);
+      margin-bottom: 30px;
     }
   }
 
-  &__social-login {
+  &--col-2 {
     display: flex;
-    div:nth-child(1) {
-      margin-right: rem(10px);
+    > * {
+      flex: 1;
+      &:nth-child(1) {
+        margin-right: rem(5px);
+      }
+      &:nth-child(2) {
+        margin-left: rem(5px);
+      }
     }
   }
 
   form {
     display: flex;
     flex-direction: column;
+    margin: 20px 0;
 
     div {
       input:nth-child(1) {
@@ -36,14 +44,9 @@
     }
   }
 
-  p {
+  .info {
     font-style: normal;
-    font-weight: 600;
-    font-size: rem(10px);
-    line-height: rem(21px);
-  }
-
-  &__link {
-    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.89rem;
   }
 }

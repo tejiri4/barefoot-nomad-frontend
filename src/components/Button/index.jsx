@@ -1,5 +1,6 @@
 // react libraries
 import React from "react";
+import { FaGoogle, FaFacebook } from "react-icons/fa";
 
 // external libraries
 import PropTypes from "prop-types";
@@ -17,26 +18,22 @@ export const Button = ({ text, handleClick }) => (
 
 export const GoogleButton = () => (
   <div className="btn">
-    <button className="btn__google">
-      <div>
-        <img
-          src="https://res.cloudinary.com/store-manager/image/upload/v1571293525/barefoot-nomad/Google_Icon.svg"
-          alt="google"
-        />
+    <button className="btn__social google">
+      <div className="icon">
+        <FaGoogle />
       </div>
-      <div>Google</div>
+      <span className="text">Google</span>
     </button>
   </div>
 );
 
 export const FacebookButton = () => (
   <div className="btn">
-    <button className="btn__facebook">
-      <img
-        src="https://res.cloudinary.com/store-manager/image/upload/v1571293525/barefoot-nomad/facebook.svg"
-        alt="facebook"
-      />
-      Facebook
+    <button className="btn__social facebook">
+      <div className="icon">
+        <FaFacebook />
+      </div>
+      <span className="text">Facebook</span>
     </button>
   </div>
 );

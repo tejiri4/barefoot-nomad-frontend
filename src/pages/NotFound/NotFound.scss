@@ -5,40 +5,34 @@
 .not-found {
   &__content {
     display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100vh - 100px);
 
     &__left {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: left;
 
       h1 {
-        color: $dark-orchid;
         font-size: 3rem;
+        margin-bottom: rem(20px);
       }
 
       p {
-        margin-bottom: rem(60px);
+        margin-bottom: rem(30px);
       }
     }
 
     &__right {
       img {
-        width: rem(500px);
-        height: rem(500px);
-        padding: rem(80px) 0;
+        max-width: rem(500px);
+        @include md {
+          width: rem(300px);
+        }
       }
-    }
-  }
-
-  @include md {
-    &__right {
-      img {
-        width: rem(300px);
-        height: rem(300px);
+      @include sm {
+        display: none;
       }
     }
   }

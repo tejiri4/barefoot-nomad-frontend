@@ -10,41 +10,37 @@ import { Button, FacebookButton, GoogleButton } from "../Button/index";
 import Input from './../Input/index';
 
 const LoginForm = () => {
-    return(
-        <div className="login-form">
-          <div className="login-form__title">
-            <h1>Login</h1>
-          </div>
-          <div className="login-form__social-login">
-            <GoogleButton />
-            <FacebookButton />
-          </div>
-          <div>
-            <form action="">
-                <Input
-                type="email"
-                placeholder="Email Address"
-                className="input"
-                required={true}
-                />
-                <Input
-                type="password"
-                placeholder="Password"
-                className="input"
-                required={true}
-                />
-                <Button text="Login" />
-            </form>
-            <div className="login-form__text">
-            <Link className="login-form__link" to="/forgot-password">
-              <p>Forgot your password</p>
-            </Link>
-            <Link className="login-form__link" to="/signup">
-              <p>Signup</p></Link>
-            </div>
-          </div>
-        </div>
-    )
+  return (
+    <div className="login-form">
+      <div className="login-form__title">
+        <h1>Login</h1>
+      </div>
+      <div className="login-form--col-2">
+        <GoogleButton />
+        <FacebookButton />
+      </div>
+      <form action="">
+        <Input
+          type="email"
+          placeholder="Email Address"
+          className="input"
+          required={true}
+        />
+        <Input
+          type="password"
+          placeholder="Password"
+          className="input"
+          required={true}
+        />
+        <Link className="login-form__link" to="/forgot-password">
+          <p className="info">Forgot your password?</p>
+        </Link>
+        <Button text="Login" />
+      </form>
+
+      <p className="info">Don't have an account? <Link className="sign-up-form__link" to="/signup">Signup here</Link></p>
+    </div>
+  )
 }
 
 export default LoginForm

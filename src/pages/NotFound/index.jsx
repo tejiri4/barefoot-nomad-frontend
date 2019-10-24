@@ -1,5 +1,5 @@
 // react libraries
-import React, { Component } from "react";
+import React from "react";
 
 //components
 import Header from '../../components/Header';
@@ -8,21 +8,19 @@ import Header from '../../components/Header';
 import "./NotFound.scss";
 import { Button } from "../../components/Button";
 
-export default class NotFound extends Component {
+export default ({ history }) => {
 
-  takeMeHome = () => {
-    this.props.history.push('/');
-  }
+  const redirect = () => history.push('/');
 
-  render() {
-    return (
-      <div className="not-found">
-        <Header/>
+  return (
+    <div className="not-found">
+      <Header />
+      <div className="container">
         <div className="not-found__content">
           <div className="not-found__content__left">
             <h1>404</h1>
-            <p>Sorry, the page you are looking <br/> for does not exist</p>
-            <Button text="Take me home" handleClick={this.takeMeHome} />
+            <p>Sorry, the page you are looking <br /> for does not exist</p>
+            <Button text="Take me home" handleClick={redirect} />
           </div>
           <div className="not-found__content__right">
             <img
@@ -32,6 +30,6 @@ export default class NotFound extends Component {
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }

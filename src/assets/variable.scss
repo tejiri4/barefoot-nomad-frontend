@@ -1,3 +1,6 @@
+// Extra small smartphones (portrait view)
+$screen-xs-max: 412px;
+
 // Small tablets and large smartphones (landscape view)
 $screen-sm-max: 576px;
 
@@ -9,6 +12,9 @@ $screen-lg-max: 992px;
 
 // Large tablets and desktops
 $screen-xl-max: 1200px;
+
+// Larger screens
+$screen-xxl-min: 1366px;
 
 // colors
 $sapphire: #062679;
@@ -22,5 +28,6 @@ $white-smoke: #f2f2f2;
 $purple-heart: #4d17c0;
 $custom-black: rgba(0, 0, 0, 0.64);
 $harley-davidson-orange: #e01717;
+$kinda-pink: #f20066;
 $dark-orchid: #ab1ac2;
 $black-rock: #363740;

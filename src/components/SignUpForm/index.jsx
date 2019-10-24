@@ -15,13 +15,13 @@ const SignUpForm = () => {
       <div className="sign-up-form__title">
         <h1>SignUp</h1>
       </div>
-      <div className="sign-up-form__social-login">
+      <div className="sign-up-form--col-2">
         <GoogleButton />
         <FacebookButton />
       </div>
       <div>
         <form action="">
-          <div>
+          <div className="sign-up-form--col-2">
             <Input
               type="text"
               placeholder="First name"
@@ -63,9 +63,7 @@ const SignUpForm = () => {
           />
           <Button text="Sign up" />
         </form>
-        <Link className="sign-up-form__link" to="/login">
-          <p>Already have an account? Login here</p>
-        </Link>
+        <p className="info">Already have an account? <Link className="sign-up-form__link" to="/login">Login here</Link></p>
       </div>
     </div>
   );

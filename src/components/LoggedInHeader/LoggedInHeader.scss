@@ -6,9 +6,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: rem(50px);
+  height: rem(100px);
   width: auto;
-  padding: rem(15px) rem(30px);
+  padding: 0 4rem;
 
   &__hamburger {
     display: none;
@@ -17,8 +17,7 @@
   &__title {
     font-style: normal;
     font-weight: 600;
-    font-size: rem(25px);
-    line-height: rem(38px);
+    font-size: 1.17rem;
     color: $custom-black;
   }
 
@@ -34,9 +33,15 @@
     }
 
     &__notification-icon {
-      img {
-        width: rem(25px);
-        height: rem(25px);
+      width: rem(25px);
+      height: rem(25px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.15s ease;
+      &:hover {
+        background: #eff3f6 !important;
       }
     }
 
@@ -45,13 +50,13 @@
       justify-content: center;
       align-items: center;
       position: absolute;
-      width: rem(10px);
-      height: rem(10px);
-      padding: rem(2px);
-      top: 0;
-      right: 0;
+      min-width: rem(18px);
+      height: rem(18px);
+      padding: 0 rem(5px);
+      top: -5px;
+      left: calc(100% - 12px);
       background: $harley-davidson-orange;
-      border-radius: 50%;
+      border-radius: 30px;
       color: $white;
       font-size: rem(10px);
     }
@@ -72,21 +77,22 @@
     }
 
     &__search {
+      width: rem(25px);
+      height: rem(25px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.15s ease;
       cursor: pointer;
-
-      img {
-        width: rem(17px);
-        height: rem(17px);
+      &:hover {
+        background: #eff3f6 !important;
       }
     }
   }
 
   @include md {
-    padding: rem(10px) rem(30px);
-
-    &__title {
-      font-size: rem(17px);
-    }
+    padding: 0 1rem;
 
     &__hamburger {
       display: block;

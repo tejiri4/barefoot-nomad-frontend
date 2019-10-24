@@ -3,48 +3,33 @@
 @import "../../assets/mixin.scss";
 
 .login-navigation {
+  flex: 0 1 310px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: rem(40px);
+  align-items: flex-start;
+  padding: 3rem;
   background: $white-smoke;
 
-  h1 {
+  &__title {
     font-style: normal;
     font-weight: bold;
-    color: #ab1ac2;
-    font-size: rem(36px);
-    display: flex;
-    align-items: center;
-    padding: rem(0px 0px);
-    width: rem(200px);
+    color: $purple-heart;
+    font-size: 2rem;
+    max-width: rem(200px);
     background: -webkit-linear-gradient(91.56deg, $purple-heart 0%, $dark-orchid 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin: rem(20px) 0;
   }
 
-  small {
-    font-style: normal;
-    color: #ab1ac2;
-    font-weight: 500;
-    font-size: rem(12px);
-    line-height: 120%;
-    display: flex;
-    align-items: center;
-    width: rem(150px);
-    background: -webkit-linear-gradient(91.56deg, $purple-heart 0%, $dark-orchid 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  &__subtitle {
+    font-size: 0.89rem;
+    max-width: rem(200px);
   }
 
   &__link {
     text-decoration: none;
-  }
-
-  img {
-    width: rem(150px);
-    height: rem(150px);
-    padding: 0 rem(160px) 0 rem(0px);
   }
 
   @include md {

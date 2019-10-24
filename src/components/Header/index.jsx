@@ -1,28 +1,30 @@
 // react libraries
 import React from "react";
 import { Link } from "react-router-dom";
+import LogoIcon from './LogoIcon';
+import { FiLogIn } from "react-icons/fi";
 
 // styles
 import "./Header.scss";
 
 export default function index() {
   return (
-    <div className="header">
-      <div className="header__logo">
-        <img
-          src="https://res.cloudinary.com/store-manager/image/upload/v1571208724/barefoot-nomad/logo.svg"
-          alt="logo"
-        />
-        <span>Barefoot Nomad</span>
-      </div>
-      <div className="header__login">
-        <img
-          src="https://res.cloudinary.com/store-manager/image/upload/v1571209634/barefoot-nomad/Login_Icon.svg"
-          alt="login"
-        />
-        <Link className="home__link" to="/login">
-          <span>Login</span>
+    <div className="container">
+      <div className="header">
+        <Link to="/">
+          <div className="header__logo">
+            <LogoIcon width={30} />
+            <span>Barefoot Nomad</span>
+          </div>
         </Link>
+        <div className="header__login">
+          <span className="icon">
+            <FiLogIn />
+          </span>
+          <Link className="home__link" to="/login">
+            <span>Login</span>
+          </Link>
+        </div>
       </div>
     </div>
   );

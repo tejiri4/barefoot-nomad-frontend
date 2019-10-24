@@ -3,20 +3,16 @@
 @import "../../assets/variable.scss";
 
 .side-nav {
-  .active {
-    background: linear-gradient(92.12deg, $purple-heart 0%, $dark-orchid 100%);
-  }
-
   display: flex;
   flex-direction: column;
   position: relative;
-  width: rem(200px);
+  width: rem(300px);
   background: $black-rock;
   z-index: 1;
   height: 100vh;
 
   &__logo {
-    margin: rem(25px) rem(25px) rem(40px) rem(30px);
+    margin: 2rem 2.5rem 3rem;
 
     img {
       width: rem(50px);
@@ -30,18 +26,27 @@
 
     a {
       display: flex;
-      padding: rem(15px) rem(30px);
+      padding: 1.5rem 2.5rem;
       color: $white;
       font-style: normal;
-      font-weight: 500;
-      font-size: rem(15px);
-      line-height: 120%;
+      font-weight: 400;
+      font-size: 1rem;
       text-decoration: none;
+      transition: all 0.15s ease;
+      &:hover:not(.active) {
+        background: rgba(255, 255, 255, 0.04);
+      }
+      &.active {
+        border-left: 3px solid transparentize($purple-heart, 0.5);
+        background: linear-gradient(
+          92.12deg,
+          transparentize($purple-heart, 0.7) 0%,
+          transparentize($dark-orchid, 0.7) 100%
+        );
+      }
 
-      img {
-        height: rem(16px);
-        width: rem(16px);
-        margin-right: rem(20px);
+      .icon {
+        margin-right: rem(15px);
       }
     }
   }
