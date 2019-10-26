@@ -1,26 +1,28 @@
 @import "~sass-rem";
+@import "../../assets/variable.scss";
 
 .modal {
   &__content {
     display: flex;
-    height: rem(502px);
+    height: 100%;
   }
 
   &__close {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    right: rem(15px);
-    top: rem(15px);
-    height: rem(27px);
-    width: rem(27px);
-    background: linear-gradient(90.54deg, #e01717 0%, #f20066 100%);
+    font-size: 0.88rem;
+    top: 3%;
+    right: 2%;
+    height: rem(25px);
+    width: rem(25px);
+    background: linear-gradient(90.54deg, $harley-davidson-orange 0%, $kinda-pink 100%);
     border-radius: 50%;
-
-    img {
-      width: rem(12px);
-      height: rem(12px);
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+      background: linear-gradient(90.54deg, darken($harley-davidson-orange, 10) 0%, darken($kinda-pink, 10) 100%);
     }
   }
 }

@@ -16,7 +16,7 @@ const SideNav = ({ showSideNav, handleNameChange }) => {
     <div
       className={`side-nav side-nav__${
         !showSideNav ? "translate-left" : "translate-right"
-      }`}
+        }`}
     >
       <div className="side-nav__logo">
         <img
@@ -33,7 +33,7 @@ const SideNav = ({ showSideNav, handleNameChange }) => {
             activeClassName="active"
             onClick={() => handleNameChange(name)}
           >
-            <img src={icon} alt={name} />
+            <span className="icon">{icon}</span>
             {name}
           </NavLink>
         ))}

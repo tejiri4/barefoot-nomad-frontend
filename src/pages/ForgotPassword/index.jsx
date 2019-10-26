@@ -9,12 +9,10 @@ import ForgotPasswordForm from './../../components/ForgotPasswordForm';
 export default class ForgotPassword extends Component {
   render() {
     return (
-      <>
-        <AppModal>
-          <LoginNavigation />
-          <ForgotPasswordForm />
-        </AppModal>
-      </>
+      <AppModal maxWidth={670}>
+        <LoginNavigation />
+        <ForgotPasswordForm />
+      </AppModal>
     );
   }
 }

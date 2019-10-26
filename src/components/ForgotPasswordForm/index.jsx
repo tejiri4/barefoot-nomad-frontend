@@ -21,7 +21,6 @@ const ForgotPasswordForm = () => {
             placeholder="Email address"
             className="input"
             required={true}
-            style={{ width: "13rem", marginBottom: "2rem" }}
           />
           <Button text="Send Reset Link" />
         </form>

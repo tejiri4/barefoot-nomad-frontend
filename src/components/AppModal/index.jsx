@@ -1,58 +1,73 @@
 // react-libraries
-import Modal from "react-modal";
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
+import Modal from "react-modal";
+import PropTypes from "prop-types";
+import { FaTimes } from 'react-icons/fa';
 
 // styles
 import "./AppModal.scss";
 
-class AppModal extends Component {
-  state = {
-    modalIsOpen: true
+const AppModal = ({ history, children, maxWidth = 400 }) => {
+  const [modalVisible, setModalVisible] = useState(true);
+
+  const closeModal = () => {
+    setModalVisible(false);
+    history.push("/");
   };
 
-  closeModal = () => {
-    this.setState({ modalIsOpen: false });
-    this.props.history.push("/");
-  };
-
-  render() {
-    const customStyles = {
-      content: {
-        top: "50%",
-        left: "50%",
-        right: "auto",
-        bottom: "auto",
-        marginRight: "-50%",
-        transform: "translate(-50%, -50%)",
-        padding: "0"
-      }
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    document.querySelector('#root').style.filter = "blur(5px)";
+    return () => {
+      document.body.style.overflow = 'initial';
+      document.querySelector('#root').style.filter = "initial";
     };
+  }, [])
 
-    return (
-      <div className="modal">
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          onAfterOpen={this.afterOpenModal}
-          onRequestClose={this.closeModal}
-          style={customStyles}
-          ariaHideApp={false}
-        >
-          <div className="modal__close" onClick={this.closeModal}>
-            <img
-              src="https://res.cloudinary.com/store-manager/image/upload/v1571289362/barefoot-nomad/multiply.svg"
-              alt="close"
-            />
-          </div>
-          <div className="modal__content">
-            {
-              this.props.children
-            }
-          </div>
-        </Modal>
-      </div>
-    );
+  const style = {
+    overlay: {
+      background: "rgba(0, 0, 0, .3)"
+    },
+    content: {
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      width: "100%",
+      maxWidth,
+      padding: "0",
+      borderRadius: "4px",
+      boxShadow: "0 0 20px rgba(0, 0, 0, .05)",
+      border: "0"
+    }
   }
+
+  return (
+    <div className="modal">
+      <Modal
+        isOpen={modalVisible}
+        // onAfterOpen={this.afterOpenModal}
+        onRequestClose={closeModal}
+        style={style}
+        ariaHideApp={false}
+      >
+        <div className="modal__close" onClick={closeModal}>
+          <FaTimes />
+        </div>
+        <div className="modal__content">
+          {children}
+        </div>
+      </Modal>
+    </div>
+  );
+}
+
+AppModal.propType = {
+  maxWidth: PropTypes.number,
+  afterOpenModal: PropTypes.func
 }
 
 export default withRouter(AppModal);

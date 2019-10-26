@@ -3,71 +3,27 @@
 @import "../../assets/variable.scss";
 
 .dashboard-card {
-  width: rem(160px);
-  padding: rem(10px) rem(40px) rem(10px) rem(20px);
+  max-width: rem(200px);
+  width: 100%;
+  padding: 1rem;
   background: white;
   box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.02);
   border-radius: rem(4px);
-  margin-bottom: rem(30px);
-    h1 {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 52px;
-        line-height: 54px;
-        margin: 0;
-    }
+  margin: 0 rem(3px) 1rem;
 
-    p {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-    }
-
-    @include md {
-        width: rem(100px);
-        padding: rem(5px) rem(20px) rem(0px) rem(10px);
-        background: white;
-        box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.02);
-        border-radius: 4px;
-      }
-
-      h1 {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 32px;
-        line-height: 44px;
-        margin: 0;
-    }
-
-    p {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 13px;
-        line-height: 19px;
-    }
-
-    @include sm {
-      width: rem(100px);
-      padding: rem(5px) rem(20px) rem(0px) rem(10px);
-      background: white;
-      box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.02);
-      border-radius: 4px;
-      margin: rem(20px);
-    }
-
-    h1 {
-      font-style: normal;
-      font-weight: bold;
-      font-size: 32px;
-      line-height: 44px;
-      margin: 0;
+  h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.4rem;
   }
 
   p {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 13px;
-      line-height: 19px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.89rem;
+  }
+
+  @include xs {
+    max-width: 100%;
   }
 }

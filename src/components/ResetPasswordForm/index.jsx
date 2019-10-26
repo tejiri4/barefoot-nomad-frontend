@@ -22,14 +22,12 @@ const ResetPasswordForm = () => {
               placeholder="New password"
               className="input"
               required={true}
-              style={{ width: "13rem", marginBottom: "0.3rem" }}
             />
             <Input
               type="text"
-              placeholder="Confirm password"
+              placeholder="Confirm new password"
               className="input"
               required={true}
-              style={{ width: "13rem", marginBottom: "1rem" }}
             />
           </div>
           <Button text="Change password" />

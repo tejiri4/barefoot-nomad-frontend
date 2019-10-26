@@ -21,4 +21,12 @@
   &__total-trips {
     color: #1d1c1c;
   }
+  
+  &__section-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.17rem;
+    color: $custom-black;
+    margin: 2rem 0;
+  }
 }

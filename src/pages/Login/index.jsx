@@ -7,16 +7,14 @@ import AppModal from '../../components/AppModal';
 import LoginForm from '../../components/LoginForm'
 
 class Login extends Component {
-    render(){
-        return(
-            <>
-            <AppModal>
-                <LoginNavigation />
-                <LoginForm />
-            </AppModal>
-            </>
-        );
-    }
+  render() {
+    return (
+      <AppModal maxWidth={670}>
+        <LoginNavigation />
+        <LoginForm />
+      </AppModal>
+    );
+  }
 }
 
 export default Login;

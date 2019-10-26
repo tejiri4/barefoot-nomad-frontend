@@ -3,12 +3,14 @@
 
 .input {
   background: $white-smoke;
-  border-radius: rem(5px);
+  border-radius: rem(4px);
   border: 1px solid $white-smoke;
-  padding: rem(10px) rem(15px);
-  outline: none;
-  font-size: rem(11px);
+  border: 0;
+  padding: 0.7rem 1.2rem;
+  font-size: .98rem;
   font-style: normal;
-  font-weight: 500;
-  margin-top: rem(10px);
+  font-weight: 400;
+  margin-bottom: 10px;
+  display: inline-block;
+  width: 100%;
 }

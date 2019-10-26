@@ -5,27 +5,21 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: rem(50px) rem(100px);
+  align-items: center;
+  height: 100px;
 
   &__logo {
     display: flex;
     align-items: center;
     text-align: center;
-
-    img {
-      width: rem(30px);
-      height: rem(30px);
-      margin-right: rem(18.25px);
-      cursor: pointer;
-    }
+    cursor: pointer;
 
     span {
       font-style: normal;
       font-weight: 600;
-      font-size: rem(14px);
-      line-height: rem(14px);
+      font-size: 1rem;
       color: $sapphire;
-      cursor: pointer;
+      margin-left: 14px;
     }
   }
 
@@ -33,27 +27,25 @@
     display: flex;
     align-items: center;
     text-align: center;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 30px;
+    transition: all 0.15s ease;
 
-    img {
-      width: rem(18px);
-      height: rem(18px);
-      margin-right: rem(20px);
+    &:hover {
+      background: #eff3f6;
+    }
+
+    .icon {
+      margin-right: 10px;
     }
 
     a {
       color: $black-russian;
     }
-
-    span {
-      font-style: normal;
-      font-weight: 500;
-      font-size: rem(12px);
-      line-height: rem(14px);
-      cursor: pointer;
-    }
-  }
-
-  @include lg {
-    padding: rem(10px) rem(50px);
   }
 }

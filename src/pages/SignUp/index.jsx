@@ -8,12 +8,10 @@ import AppModal from "./../../components/AppModal";
 class SignUp extends Component {
   render() {
     return (
-      <>
-        <AppModal>
-          <LoginNavigation />
-          <SignUpForm />
-        </AppModal>
-      </>
+      <AppModal maxWidth={670}>
+        <LoginNavigation />
+        <SignUpForm />
+      </AppModal>
     );
   }
 }

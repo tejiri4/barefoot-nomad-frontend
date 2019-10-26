@@ -1,5 +1,6 @@
 // react libraries
 import React from "react";
+import { FiSearch, FiBell } from "react-icons/fi";
 
 // external libraries
 import PropTypes from "prop-types";
@@ -13,17 +14,11 @@ const LoggedInHeader = ({ showSideNav, handleShowSideNav, pageName }) => {
       <div className="logged-in-header__title">{pageName}</div>
       <div className="logged-in-header__content">
         <div className="logged-in-header__content__search">
-          <img
-            src="https://res.cloudinary.com/store-manager/image/upload/v1571510758/barefoot-nomad/magnifying-glass.svg"
-            alt="search"
-          />
+          <FiSearch />
         </div>
         <div className="logged-in-header__content__notification">
           <div className="logged-in-header__content__notification-icon">
-            <img
-              src="https://res.cloudinary.com/store-manager/image/upload/v1571531527/barefoot-nomad/notification.svg"
-              alt="notification"
-            />
+            <FiBell />
           </div>
           <div className="logged-in-header__content__notification-count">
             <p>12</p>
@@ -43,11 +38,11 @@ const LoggedInHeader = ({ showSideNav, handleShowSideNav, pageName }) => {
             alt="close"
           />
         ) : (
-          <img
-            src="https://res.cloudinary.com/store-manager/image/upload/v1571556822/barefoot-nomad/menu.svg"
-            alt="hamburger"
-          />
-        )}
+            <img
+              src="https://res.cloudinary.com/store-manager/image/upload/v1571556822/barefoot-nomad/menu.svg"
+              alt="hamburger"
+            />
+          )}
       </div>
     </div>
   );
