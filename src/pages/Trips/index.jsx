@@ -1,5 +1,5 @@
 // react libraries
-import React from "react";
+import React, { useState } from "react";
 
 // styles
 import "./Trips.scss";
@@ -7,9 +7,15 @@ import "./Trips.scss";
 // components
 import Tabs from "./../../components/Tabs";
 import { BasicButton } from "../../components/Button";
+import AppModal from "../../components/AppModal";
+import NewRequestForm from "./../../components/NewRequestForm";
 
 const Trips = () => {
+  const [showModal, setShowModal] = useState(false);
+
   const handleTabChange = name => {};
+
+  const showNewRequestModal = () => setShowModal(!showModal);
 
   const tabContents = [
     {
@@ -34,7 +40,14 @@ const Trips = () => {
     <div className="trips">
       <Tabs handleTabChange={handleTabChange} tabContents={tabContents} />
       <div className="trips__new-request">
-        <BasicButton text="New Request" />
+        <AppModal
+          showModal={showModal}
+          trigger={
+            <BasicButton text="New Request" handleClick={showNewRequestModal} />
+          }
+        >
+          <NewRequestForm />
+        </AppModal>
       </div>
     </div>
   );

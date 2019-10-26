@@ -38,9 +38,11 @@ export const FacebookButton = () => (
   </div>
 );
 
-export const BasicButton = ({ text }) => (
+export const BasicButton = ({ text, handleClick }) => (
   <div className="btn">
-    <button className="btn__basic">{text}</button>
+    <button className="btn__basic" onClick={handleClick}>
+      {text}
+    </button>
   </div>
 );
 
