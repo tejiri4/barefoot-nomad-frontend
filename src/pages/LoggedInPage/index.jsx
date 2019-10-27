@@ -10,6 +10,7 @@ import SideNav from "../../components/SideNav";
 import LoggedInHeader from "../../components/LoggedInHeader";
 import Dashboard from "../Dashboard";
 import Trips from "./../Trips/index";
+import Notification from '../Notification/index';
 
 const LoggedInPage = ({ history }) => {
   const [showSideNav, setShowSideNav] = useState(true);
@@ -48,6 +49,7 @@ const LoggedInPage = ({ history }) => {
             pageName={pageName}
             handleShowNotification={handleShowNotification}
           />
+          <Notification />
           <div className="logged-in-page__components">
             <>
               <Switch>

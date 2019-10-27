@@ -4,7 +4,23 @@
 
 
 .notification-page {
-    width: rem(440px);
-    height: rem(300px);
+    width: rem(400px);
+    height: rem(400px);
     background-color: white;
+    position: absolute;
+    right: rem(30px);
+    margin: rem(70px) rem(120px);
+    border-radius: rem(20px);
+}
+
+@include sm {
+  .notification-page {
+      width: rem(200px);
+      height: rem(400px);
+      background-color: white;
+      position: absolute;
+      right: rem(30px);
+      margin: rem(70px) rem(120px);
+      border-radius: rem(20px);
+    }
 }

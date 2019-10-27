@@ -8,8 +8,6 @@ import PropTypes from "prop-types";
 // styles
 import "./LoggedInHeader.scss";
 
-import Notification from '../../components/NotificationCard';
-
 const LoggedInHeader = ({ showSideNav, handleShowSideNav, showNotification, handleShowNotification, pageName }) => {
   return (
     <div className="logged-in-header">

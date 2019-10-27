@@ -11,7 +11,7 @@ const NotificationCard = ({ profileImage, content, time }) => {
           </div>
           <div className="notification__content-details">
             <p className="notification__content">{content}</p>
-            <p class="notification__time">{time}</p>
+            <p className="notification__time">{time}</p>
           </div>
         </div>
       )
