@@ -5,10 +5,10 @@ import React, { useState } from "react";
 import "./Trips.scss";
 
 // components
-import Tabs from "./../../components/Tabs";
+import Tabs from "../../components/Tabs";
 import { BasicButton } from "../../components/Button";
 import AppModal from "../../components/AppModal";
-import NewRequestForm from "./../../components/NewRequestForm";
+import NewRequestForm from "../NewRequestForm";
 
 const Trips = () => {
   const [showModal, setShowModal] = useState(false);
@@ -41,6 +41,7 @@ const Trips = () => {
       <Tabs handleTabChange={handleTabChange} tabContents={tabContents} />
       <div className="trips__new-request">
         <AppModal
+          maxWidth="750px"
           showModal={showModal}
           trigger={
             <BasicButton text="New Request" handleClick={showNewRequestModal} />

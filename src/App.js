@@ -5,33 +5,16 @@ import { Route, withRouter, Switch } from "react-router-dom";
 // styles
 import "./App.css";
 
-// routes
-import routes from "./routes";
-
 // components
-import Home from "./pages/Home/index";
-import NotFound from "./pages/NotFound/index";
-import LoggedInPage from "./pages/LoggedInPage/index";
+import NotFound from "./pages/NotFound";
+import LoggedInPage from "./pages/LoggedInPage";
+import LoggedOutPage from "./pages/LoggedOutPage";
 
-const App = ({ history }) => {
+const App = () => {
   return (
     <>
-      {routes.map(({ path, component, exact }, index) => (
-        <Route exact={exact} path={path} component={component} key={index} />
-      ))}
+      <Route path="/" component={LoggedOutPage} />
       <Switch>
-        <Route
-          exact={
-            ![
-              "/signup",
-              "/login",
-              "/reset-password",
-              "/forgot-password"
-            ].includes(history.location.pathname)
-          }
-          path="/"
-          component={Home}
-        />
         <Route exact={false} path="/dashboard" component={LoggedInPage} />
         <Route component={NotFound} />
       </Switch>

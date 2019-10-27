@@ -5,6 +5,7 @@
   &__content {
     display: flex;
     height: 100%;
+    justify-content: center;
   }
 
   &__close {
@@ -17,12 +18,20 @@
     right: 2%;
     height: rem(25px);
     width: rem(25px);
-    background: linear-gradient(90.54deg, $harley-davidson-orange 0%, $kinda-pink 100%);
+    background: linear-gradient(
+      90.54deg,
+      $harley-davidson-orange 0%,
+      $kinda-pink 100%
+    );
     border-radius: 50%;
     color: #fff;
     cursor: pointer;
     &:hover {
-      background: linear-gradient(90.54deg, darken($harley-davidson-orange, 10) 0%, darken($kinda-pink, 10) 100%);
+      background: linear-gradient(
+        90.54deg,
+        darken($harley-davidson-orange, 10) 0%,
+        darken($kinda-pink, 10) 100%
+      );
     }
   }
 }

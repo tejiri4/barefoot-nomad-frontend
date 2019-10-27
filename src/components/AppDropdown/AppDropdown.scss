@@ -1,0 +1,30 @@
+@import "~sass-rem";
+@import "../../assets/variable.scss";
+
+.app-drop-down {
+  .Dropdown-control {
+    background: $white-smoke;
+    border-radius: rem(3px);
+    font-size: rem(11px);
+    border: none;
+    height: rem(30px);
+    cursor: pointer;
+  }
+
+  .error {
+    border: rem(1px) solid $harley-davidson-orange;
+  }
+
+  .lg {
+    width: rem(370px);
+  }
+
+  .sm {
+    width: rem(170px);
+  }
+
+  &__error {
+    color: $harley-davidson-orange;
+    font-size: rem(10px);
+  }
+}

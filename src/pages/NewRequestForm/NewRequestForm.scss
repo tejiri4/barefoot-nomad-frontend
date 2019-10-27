@@ -1,0 +1,35 @@
+@import "~sass-rem";
+
+.new-request-form {
+  padding: rem(20px);
+
+  &__title {
+    font-size: rem(12px);
+  }
+
+  &__flex {
+    display: flex;
+    margin: rem(15px) 0;
+
+    .app-drop-down:nth-child(2) {
+      margin-left: rem(15px);
+    }
+
+    .date-picker:nth-child(2) {
+      margin-left: rem(15px);
+    }
+  }
+
+  &__submit {
+    .btn {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  .btn {
+    button {
+      margin-top: rem(15px);
+    }
+  }
+}

@@ -14,7 +14,7 @@ const AppModal = ({ history, children, maxWidth = 400, trigger }) => {
 
   const closeModal = () => {
     setModalVisible(false);
-    this.state.autoTrigger && history.push("/");
+    autoTrigger && history.push("/");
   };
 
   useEffect(() => {
@@ -23,21 +23,23 @@ const AppModal = ({ history, children, maxWidth = 400, trigger }) => {
       "/login",
       "/reset-password",
       "/forgot-password"
-    ].includes(this.props.history.location.pathname);
+    ].includes(history.location.pathname);
 
     if (autoTriggerPaths) {
-      this.setState({ modalIsOpen: true, autoTrigger: true });
+      setModalVisible(true);
+      setAutoTrigger(true);
+      document.body.style.overflow = "hidden";
+      document.querySelector("#root").style.filter = "blur(5px)";
     }
-    document.body.style.overflow = "hidden";
-    document.querySelector("#root").style.filter = "blur(5px)";
+
     return () => {
       document.body.style.overflow = "initial";
       document.querySelector("#root").style.filter = "initial";
     };
-  }, []);
+  }, [history]);
 
   const openModal = () => {
-    this.setState({ modalIsOpen: true });
+    setModalVisible(true);
   };
 
   const style = {
@@ -51,8 +53,8 @@ const AppModal = ({ history, children, maxWidth = 400, trigger }) => {
       right: "auto",
       bottom: "auto",
       marginRight: "-50%",
-      width: "100%",
       maxWidth,
+      width: "100%",
       padding: "0",
       borderRadius: "4px",
       boxShadow: "0 0 20px rgba(0, 0, 0, .05)",
@@ -65,7 +67,6 @@ const AppModal = ({ history, children, maxWidth = 400, trigger }) => {
       {trigger && <div onClick={openModal}>{trigger}</div>}
       <Modal
         isOpen={modalVisible}
-        // onAfterOpen={this.afterOpenModal}
         onRequestClose={closeModal}
         style={style}
         ariaHideApp={false}

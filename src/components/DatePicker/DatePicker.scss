@@ -1,0 +1,140 @@
+@import "~sass-rem";
+@import "../../assets/variable.scss";
+
+.date-picker {
+  cursor: pointer;
+
+  &__header {
+    background: $white-smoke;
+    border-radius: rem(4px);
+    height: rem(30px);
+    font-size: rem(10px);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: $grey;
+    font-style: normal;
+    font-weight: 500;
+    justify-content: space-between;
+    padding: 0 rem(10px);
+    margin-bottom: rem(5px);
+
+    img {
+      width: rem(13px);
+      height: rem(13px);
+    }
+  }
+
+  .m-input-moment {
+    width: rem(240px);
+    font-size: rem(10px);
+    position: absolute;
+    z-index: 1;
+    background: $white;
+    .btn-save {
+      width: 30%;
+      margin-left: 35%;
+      font-size: rem(10px);
+      background-color: $dark-orchid;
+    }
+
+    .tabs {
+      height: rem(270px);
+      font-size: rem(10px);
+    }
+
+    .options {
+      button {
+        border: rem(1px) solid $dark-orchid;
+        font-size: rem(10px);
+        color: $dark-orchid;
+      }
+
+      button.is-active {
+        background-color: $dark-orchid;
+        color: $white;
+      }
+    }
+  }
+
+  .m-calendar {
+    .current-day {
+      &:hover {
+        color: $white;
+      }
+      color: $dark-orchid;
+    }
+
+    thead {
+      td {
+        font-size: rem(7px);
+        color: $dark-orchid;
+      }
+    }
+
+    tbody {
+      td:hover {
+        background: $dark-orchid;
+        border-color: $dark-orchid;
+      }
+    }
+
+    .toolbar {
+      .current-date {
+        color: $dark-orchid;
+      }
+      button {
+        border: rem(1px) solid $dark-orchid;
+        background: $dark-orchid;
+      }
+    }
+  }
+
+  .m-time {
+    width: 100%;
+
+    .time {
+      width: rem(35px);
+      height: rem(35px);
+      font-size: rem(11px);
+      line-height: rem(35px);
+      background-color: $dark-orchid;
+    }
+
+    .separater {
+      color: $dark-orchid;
+    }
+
+    .time-text {
+      font-size: rem(12px);
+      color: $dark-orchid;
+    }
+  }
+
+  .u-slider-time {
+    .value {
+      background-color: $dark-orchid;
+    }
+
+    .handle:after {
+      border: rem(3px) solid $dark-orchid;
+    }
+  }
+
+  .lg {
+    width: rem(370px);
+  }
+
+  .sm {
+    width: rem(170px);
+  }
+
+  &__error {
+    color: $harley-davidson-orange;
+    font-size: rem(10px);
+  }
+
+  .error {
+    border: rem(1px) solid $harley-davidson-orange;
+  }
+}

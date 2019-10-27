@@ -38,10 +38,24 @@ export const FacebookButton = () => (
   </div>
 );
 
-export const BasicButton = ({ text, handleClick }) => (
+export const BasicButton = ({
+  text,
+  handleClick,
+  children,
+  borderColor,
+  color
+}) => (
   <div className="btn">
-    <button className="btn__basic" onClick={handleClick}>
-      {text}
+    <button
+      type="button"
+      className="btn__basic"
+      style={{
+        borderColor: `${borderColor ? borderColor : "#ab1ac2"}`,
+        color: `${color ? color : "#ab1ac2"}`
+      }}
+      onClick={handleClick}
+    >
+      {text ? text : children}
     </button>
   </div>
 );
@@ -49,4 +63,12 @@ export const BasicButton = ({ text, handleClick }) => (
 Button.propTypes = {
   text: PropTypes.string,
   handleClick: PropTypes.func
+};
+
+BasicButton.propTypes = {
+  text: PropTypes.string,
+  handleClick: PropTypes.func,
+  borderColor: PropTypes.string,
+  color: PropTypes.string,
+  children: PropTypes.array
 };

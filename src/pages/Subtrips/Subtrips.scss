@@ -1,0 +1,20 @@
+@import "~sass-rem";
+@import "../../assets/variable.scss";
+
+.subtrips {
+  border: rem(1px) solid $black;
+  border-radius: rem(5px);
+  margin-top: rem(15px);
+
+  &__flex {
+    display: flex;
+
+    div {
+      margin: rem(2px) rem(3px);
+    }
+  }
+
+  .textarea {
+    margin: rem(2px) rem(6px);
+  }
+}
