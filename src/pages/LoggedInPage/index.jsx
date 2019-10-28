@@ -49,7 +49,7 @@ const LoggedInPage = ({ history }) => {
             pageName={pageName}
             handleShowNotification={handleShowNotification}
           />
-          <Notification />
+          {showNotification && <Notification />}
           <div className="logged-in-page__components">
             <>
               <Switch>

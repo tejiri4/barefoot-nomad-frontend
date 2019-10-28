@@ -27,6 +27,11 @@ const Notification = () => {
             content="Sarah Conor replied to your comment"
             time="10 hours"
           />
+          <NotificationCard
+            profileImage="https://res.cloudinary.com/store-manager/image/upload/v1571533873/barefoot-nomad/profile.jpg"
+            content="Sarah Conor replied to your comment"
+            time="10 hours"
+          />
         </div>
     )
 }

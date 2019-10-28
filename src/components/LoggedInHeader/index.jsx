@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
 // styles
 import "./LoggedInHeader.scss";
 
-const LoggedInHeader = ({ showSideNav, handleShowSideNav, showNotification, handleShowNotification, pageName }) => {
+const LoggedInHeader = ({ showSideNav, handleShowSideNav, handleShowNotification, pageName }) => {
   return (
     <div className="logged-in-header">
       <div className="logged-in-header__title">{pageName}</div>

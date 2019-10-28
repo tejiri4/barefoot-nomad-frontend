@@ -3,8 +3,8 @@
 @import "../../assets/variable.scss";
 
 .notification {
-    width: rem(90%);
-    background: #FFFFFF;
+    width: rem(100%);
+    background:transparent;
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
@@ -46,14 +46,14 @@
       color: rgba(0, 0, 0, 0.32);
     }
 
-    @include sm {
-      width: rem(90%);
-      background: #FFFFFF;
+    @include md {
+      width: rem(100%);
+      background: transparent;
       display: flex;
       flex-wrap: wrap;
       justify-content: left;
       padding: rem(5px);
-      border-radius: rem(10px);
+      border-radius: rem(5px);
   
       &__profile-image {
           position: relative;
@@ -77,7 +77,7 @@
       &__content {
         font-style: normal;
         font-weight: 50;
-        font-size: 12px;
+        font-size: 10px;
         line-height: 19px;
         margin: rem(2px) 0
       }
