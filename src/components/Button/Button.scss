@@ -20,7 +20,11 @@
     &:hover,
     &:active,
     &:focus {
-      background: linear-gradient(91.98deg, darken($purple-heart, 10) 0%, darken($dark-orchid, 10) 100%);
+      background: linear-gradient(
+        91.98deg,
+        darken($purple-heart, 10) 0%,
+        darken($dark-orchid, 10) 100%
+      );
     }
   }
 
@@ -52,7 +56,7 @@
       color: #fff;
       .icon {
         color: $summer-sky;
-        background: #fff;
+        background: $white;
       }
     }
     &.facebook {
@@ -65,17 +69,23 @@
   }
 
   &__basic {
-    background: -webkit-linear-gradient(90.58deg, $purple-heart 0%, $dark-orchid 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    background: $white;
     outline: none;
     cursor: pointer;
     border-radius: rem(4px);
-    padding: 4px rem(30px);
-    border: rem(1.5px) solid $dark-orchid;
+    padding: rem(4px) rem(30px);
+    border-width: rem(1.5px);
+    border-style: solid;
     font-style: normal;
     font-weight: 500;
     font-size: rem(15px);
     line-height: rem(23px);
+
+    img {
+      width: rem(15px);
+      height: rem(15px);
+    }
   }
 }

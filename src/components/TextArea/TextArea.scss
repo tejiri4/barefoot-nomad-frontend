@@ -1,0 +1,22 @@
+@import "~sass-rem";
+@import "../../assets/variable.scss";
+
+.text-area {
+  textarea {
+    width: 100%;
+    border: none;
+    background: $white-smoke;
+    border-radius: rem(4px);
+    padding: rem(10px);
+    font-size: rem(10px);
+  }
+
+  &__error {
+    color: $harley-davidson-orange;
+    font-size: rem(10px);
+  }
+
+  .error {
+    border: rem(1px) solid $harley-davidson-orange;
+  }
+}

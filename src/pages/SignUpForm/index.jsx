@@ -1,13 +1,17 @@
 // react libraries
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 // styles
 import "./SignUpForm.scss";
 
 // components
-import { Button, FacebookButton, GoogleButton } from "../Button/index";
-import Input from './../Input/index';
+import {
+  Button,
+  FacebookButton,
+  GoogleButton
+} from "../../components/Button/index";
+import Input from "../../components/Input/index";
 
 const SignUpForm = () => {
   return (
@@ -63,7 +67,12 @@ const SignUpForm = () => {
           />
           <Button text="Sign up" />
         </form>
-        <p className="info">Already have an account? <Link className="sign-up-form__link" to="/login">Login here</Link></p>
+        <p className="info">
+          Already have an account?{" "}
+          <Link className="sign-up-form__link" to="/login">
+            Login here
+          </Link>
+        </p>
       </div>
     </div>
   );

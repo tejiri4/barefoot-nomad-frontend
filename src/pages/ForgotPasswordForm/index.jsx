@@ -5,8 +5,8 @@ import React from "react";
 import "./ForgotPasswordForm.scss";
 
 // components
-import Input from "./../Input/index";
-import { Button } from "./../Button/index";
+import Input from "../../components/Input/index";
+import { Button } from "../../components/Button/index";
 
 const ForgotPasswordForm = () => {
   return (

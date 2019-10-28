@@ -1,13 +1,13 @@
 // import react libaries
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 // styles
-import './LoginForm.scss'
+import "./LoginForm.scss";
 
 // import components
-import { Button, FacebookButton, GoogleButton } from "../Button/index";
-import Input from './../Input/index';
+import { Button, FacebookButton, GoogleButton } from "../../components/Button";
+import Input from "../../components/Input/index";
 
 const LoginForm = () => {
   return (
@@ -38,9 +38,14 @@ const LoginForm = () => {
         <Button text="Login" />
       </form>
 
-      <p className="info">Don't have an account? <Link className="sign-up-form__link" to="/signup">Signup here</Link></p>
+      <p className="info">
+        Don't have an account?{" "}
+        <Link className="sign-up-form__link" to="/signup">
+          Signup here
+        </Link>
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default LoginForm
+export default LoginForm;
