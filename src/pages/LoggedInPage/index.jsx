@@ -10,11 +10,13 @@ import SideNav from "../../components/SideNav";
 import LoggedInHeader from "../../components/LoggedInHeader";
 import Dashboard from "../Dashboard";
 import Trips from "./../Trips/index";
+import Notification from '../Notification/index';
 
 const LoggedInPage = ({ history }) => {
-  const [showSideNav, setShowSideNav] = useState(false);
+  const [showSideNav, setShowSideNav] = useState(true);
   const [pageName, setPageName] = useState("Dashboard");
   const [currentPath, setCurrentPath] = useState("/dashboard");
+  const [showNotification, setShowNotification] = useState(false)
 
   useEffect(() => {
     const name = history.location.pathname.split("/")[2];
@@ -30,6 +32,8 @@ const LoggedInPage = ({ history }) => {
 
   const handleNameChange = name => setPageName(name);
 
+  const handleShowNotification = () => setShowNotification(!showNotification)
+
   return (
     <>
       <div className="logged-in-page">
@@ -43,7 +47,9 @@ const LoggedInPage = ({ history }) => {
             showSideNav={showSideNav}
             handleShowSideNav={handleShowSideNav}
             pageName={pageName}
+            handleShowNotification={handleShowNotification}
           />
+          {showNotification && <Notification />}
           <div className="logged-in-page__components">
             <>
               <Switch>
