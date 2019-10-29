@@ -8,7 +8,12 @@ import PropTypes from "prop-types";
 // styles
 import "./LoggedInHeader.scss";
 
-const LoggedInHeader = ({ showSideNav, handleShowSideNav, handleShowNotification, pageName }) => {
+const LoggedInHeader = ({
+  showSideNav,
+  handleShowSideNav,
+  handleShowNotification,
+  pageName
+}) => {
   return (
     <div className="logged-in-header">
       <div className="logged-in-header__title">{pageName}</div>
@@ -16,7 +21,10 @@ const LoggedInHeader = ({ showSideNav, handleShowSideNav, handleShowNotification
         <div className="logged-in-header__content__search">
           <FiSearch />
         </div>
-        <div className="logged-in-header__content__notification" onClick={handleShowNotification}>
+        <div
+          className="logged-in-header__content__notification"
+          onClick={handleShowNotification}
+        >
           <div className="logged-in-header__content__notification-icon">
             <FiBell />
           </div>
@@ -38,11 +46,11 @@ const LoggedInHeader = ({ showSideNav, handleShowSideNav, handleShowNotification
             alt="close"
           />
         ) : (
-            <img
-              src="https://res.cloudinary.com/store-manager/image/upload/v1571556822/barefoot-nomad/menu.svg"
-              alt="hamburger"
-            />
-          )}
+          <img
+            src="https://res.cloudinary.com/store-manager/image/upload/v1571556822/barefoot-nomad/menu.svg"
+            alt="hamburger"
+          />
+        )}
       </div>
     </div>
   );
