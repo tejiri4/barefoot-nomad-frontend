@@ -5,11 +5,18 @@
   display: flex;
   justify-content: space-between;
   align-content: center;
-  flex-wrap: wrap-reverse;
+  flex-direction: column;
 
   &__new-request {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(30px);
+    flex-wrap: wrap-reverse;
   }
 }
