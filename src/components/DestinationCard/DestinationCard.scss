@@ -6,7 +6,7 @@
 
   &__image {
     img {
-      box-shadow: 0 10px 14px $black;
+      box-shadow: 0 10px 14px map-get($map: $black, $key: "0.1");
       width: 100%;
       height: rem(120px);
       object-fit: cover;

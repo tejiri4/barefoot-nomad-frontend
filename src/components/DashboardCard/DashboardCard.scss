@@ -10,43 +10,42 @@
   box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.02);
   border-radius: rem(4px);
   margin: 0 rem(3px) 1rem;
-    p {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-    }
+  p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
 
-      h1 {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 32px;
-        line-height: 44px;
-        margin: 0;
-    }
+  h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 44px;
+    margin: 0;
+  }
 
-    p {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 13px;
-        line-height: 19px;
-    }
+  p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+  }
 
-    @include sm {
-      width: rem(100px);
-      padding: rem(5px) rem(20px) rem(0px) rem(10px);
-      background: white;
-      box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.02);
-      border-radius: 4px;
-      margin: rem(20px);
-    }
+  @include sm {
+    width: rem(100px);
+    padding: rem(5px) rem(20px) rem(0px) rem(10px);
+    background: white;
+    box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.02);
+    border-radius: rem(4px);
+  }
 
-    h1 {
-      font-style: normal;
-      font-weight: bold;
-      font-size: 32px;
-      line-height: 44px;
-      margin: 0;
+  h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 44px;
+    margin: 0;
   }
 
   p {
@@ -68,5 +67,7 @@
     position: relative;
     box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.02);
     border-radius: 4px;
+    width: 100%;
+    padding: 10px;
   }
 }

@@ -1,6 +1,6 @@
 // react libraries
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 
 // external libraries
 import PropTypes from "prop-types";
@@ -11,12 +11,12 @@ import "./SideNav.scss";
 // fixtures
 import dashboardLinks from "./fixtures";
 
-const SideNav = ({ showSideNav, handleNameChange }) => {
+const SideNav = ({ showSideNav, handleNameChange, history }) => {
   return (
     <div
       className={`side-nav side-nav__${
         !showSideNav ? "translate-left" : "translate-right"
-        }`}
+      }`}
     >
       <div className="side-nav__logo">
         <img
@@ -25,10 +25,10 @@ const SideNav = ({ showSideNav, handleNameChange }) => {
         />
       </div>
       <div className="side-nav__links">
-        {dashboardLinks.map(({ path, name, icon }, index) => (
+        {dashboardLinks(history).map(({ path, name, icon, exact }, index) => (
           <NavLink
+            exact={exact}
             key={index}
-            exact
             to={path}
             activeClassName="active"
             onClick={() => handleNameChange(name)}
@@ -47,4 +47,4 @@ SideNav.propTypes = {
   handleNameChange: PropTypes.func
 };
 
-export default SideNav;
+export default withRouter(SideNav);

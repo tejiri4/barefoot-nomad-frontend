@@ -10,13 +10,14 @@ import SideNav from "../../components/SideNav";
 import LoggedInHeader from "../../components/LoggedInHeader";
 import Dashboard from "../Dashboard";
 import Trips from "./../Trips/index";
-import Notification from '../Notification/index';
+import Notification from "../Notification/index";
+import RequestPage from "./../RequestPage/index";
 
 const LoggedInPage = ({ history }) => {
   const [showSideNav, setShowSideNav] = useState(true);
   const [pageName, setPageName] = useState("Dashboard");
   const [currentPath, setCurrentPath] = useState("/dashboard");
-  const [showNotification, setShowNotification] = useState(false)
+  const [showNotification, setShowNotification] = useState(false);
 
   useEffect(() => {
     const name = history.location.pathname.split("/")[2];
@@ -32,7 +33,7 @@ const LoggedInPage = ({ history }) => {
 
   const handleNameChange = name => setPageName(name);
 
-  const handleShowNotification = () => setShowNotification(!showNotification)
+  const handleShowNotification = () => setShowNotification(!showNotification);
 
   return (
     <>
@@ -53,7 +54,17 @@ const LoggedInPage = ({ history }) => {
           <div className="logged-in-page__components">
             <>
               <Switch>
+                <Route
+                  exact
+                  path="/dashboard/trips/request/:id"
+                  children={<RequestPage />}
+                />
                 <Route exact path="/dashboard/trips" component={Trips} />
+                <Route
+                  exact
+                  path="/dashboard/request/:id"
+                  children={<RequestPage />}
+                />
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Redirect to="/404" />
               </Switch>

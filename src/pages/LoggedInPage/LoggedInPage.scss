@@ -1,19 +1,23 @@
 @import "../../assets/mixin.scss";
 @import "~sass-rem";
+@import "../../assets/variable.scss";
 
 .logged-in-page {
   display: flex;
-  background: #f8f8f8;
+  background: $white-smoke;
+  height: 100vh;
 
   &__content {
     width: 95%;
     display: flex;
     flex-direction: column;
+    height: 100vh;
   }
 
   &__components {
     width: auto;
     padding: 2rem 4rem;
+    overflow: auto;
   }
 
   @include xl {

@@ -31,4 +31,12 @@ $harley-davidson-orange: #e01717;
 $kinda-pink: #f20066;
 $black-rock: #363740;
 $grey: #828282;
-$black: rgba(0, 0, 0, 0.1);
+$black: (
+  "0.1": rgba(0, 0, 0, 0.1),
+  "0.6": rgba(0, 0, 0, 0.6),
+  "0.64": rgba(0, 0, 0, 0.64),
+  "0.32": rgba(0, 0, 0, 0.32),
+  "0.04": rgba(0, 0, 0, 0.04),
+  "0.02": rgba(0, 0, 0, 0.02)
+);
+$yellow: #ffc107;

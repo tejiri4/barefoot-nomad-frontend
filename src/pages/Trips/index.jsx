@@ -58,6 +58,7 @@ const Trips = () => {
       </div>
       <div>
         <RequestCard
+          id="1"
           type="Return Trip"
           origin="Lagos"
           destination="Jos"
@@ -65,6 +66,7 @@ const Trips = () => {
           status="Approved"
         />
         <RequestCard
+          id="2"
           type="Return Trip"
           origin="New York"
           destination="New Jersey"
