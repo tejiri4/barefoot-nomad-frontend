@@ -16,7 +16,9 @@ const LoggedInHeader = ({
 }) => {
   return (
     <div className="logged-in-header">
-      <div className="logged-in-header__title">{pageName}</div>
+      <div className="logged-in-header__title">
+        {pageName.toLowerCase() === "request" ? "Dashboard" : pageName}
+      </div>
       <div className="logged-in-header__content">
         <div className="logged-in-header__content__search">
           <FiSearch />

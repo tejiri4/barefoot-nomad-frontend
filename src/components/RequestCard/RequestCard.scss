@@ -5,13 +5,15 @@
 .request {
   width: 100%;
   border-radius: 4px;
-  background: #fff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+  background: $white;
+  box-shadow: 0 10px 20px map-get($map: $black, $key: "0.04");
   padding: 2rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
+  cursor: pointer;
+
   &__left {
     display: flex;
     align-items: center;
@@ -23,7 +25,7 @@
       }
     }
     &__subtext {
-      color: #ffc107;
+      color: $yellow;
     }
   }
   &__user {

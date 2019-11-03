@@ -1,0 +1,168 @@
+@import "~sass-rem";
+@import "../../assets/variable.scss";
+@import "../../assets/mixin.scss";
+
+.request-page {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    &__back {
+      cursor: pointer;
+    }
+  }
+
+  &__accomodation {
+    margin-top: rem(50px);
+    padding: rem(20px);
+    background: $white;
+    box-shadow: 0 rem(11px) rem(15px) map-get($map: $black, $key: "0.02");
+
+    &__title {
+      display: flex;
+      margin-bottom: rem(40px);
+      align-items: center;
+
+      img {
+        margin-right: rem(12px);
+      }
+
+      p {
+        background: -webkit-linear-gradient(
+          91.56deg,
+          $purple-heart 0%,
+          $dark-orchid 100%
+        );
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: rem(20px);
+
+      div:nth-child(1) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: rem(15px);
+        line-height: 120%;
+        color: $black-russian;
+        border-radius: rem(15px);
+      }
+
+      @include sm {
+        div:nth-child(1) {
+          margin-bottom: rem(10px);
+        }
+      }
+    }
+  }
+
+  &__comment {
+    margin-top: rem(50px);
+    padding: rem(20px);
+    background: $white;
+    box-shadow: 0 rem(11px) rem(15px) map-get($map: $black, $key: "0.02");
+
+    &__title {
+      display: flex;
+
+      img {
+        margin-right: rem(12px);
+      }
+
+      p {
+        background: -webkit-linear-gradient(
+          91.56deg,
+          $purple-heart 0%,
+          $dark-orchid 100%
+        );
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &__section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: rem(30px);
+      margin-top: rem(10px);
+
+      .text-area {
+        margin: rem(20px) 0;
+        margin-right: rem(50px);
+        width: 90%;
+
+        textarea {
+          height: rem(60px);
+          font-size: rem(12px);
+        }
+      }
+    }
+  }
+
+  &__details {
+    margin-top: rem(50px);
+    background: $white;
+    box-shadow: 0 rem(11px) rem(15px) map-get($map: $black, $key: "0.02");
+    display: flex;
+    padding: rem(30px) 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .border-right {
+      border-right: rem(1.2px) solid map-get($map: $black, $key: "0.6");
+
+      @include md {
+        border-right: none;
+      }
+    }
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      width: rem(250px);
+
+      div:nth-child(2) {
+        font-style: normal;
+        font-weight: 600;
+        font-size: rem(14px);
+        line-height: rem(28px);
+        color: map-get($map: $black, $key: "0.6");
+      }
+
+      @include sm {
+        margin-bottom: rem(20px);
+      }
+    }
+
+    &__card-flex-row {
+      display: flex;
+
+      p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: rem(11px);
+        line-height: rem(21px);
+        background: -webkit-linear-gradient(
+          91.56deg,
+          $purple-heart 0%,
+          $dark-orchid 100%
+        );
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-left: rem(10px);
+      }
+    }
+
+    @include md {
+      justify-content: start;
+      padding: rem(20px);
+    }
+  }
+}

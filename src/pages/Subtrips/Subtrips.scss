@@ -2,7 +2,7 @@
 @import "../../assets/variable.scss";
 
 .subtrips {
-  border: rem(1px) solid $black;
+  border: rem(1px) solid map-get($map: $black, $key: "0.1");
   border-radius: rem(5px);
   margin-top: rem(15px);
 

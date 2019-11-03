@@ -1,11 +1,11 @@
 import React from "react";
 
 // styles
-import './Dashboard.scss'
+import "./Dashboard.scss";
 
 // components
-import DashboardCard from '../../components/DashboardCard';
-import RequestCard from '../../components/RequestCard';
+import DashboardCard from "../../components/DashboardCard";
+import RequestCard from "../../components/RequestCard";
 
 const Dashboard = () => {
   return (
@@ -34,6 +34,7 @@ const Dashboard = () => {
       </div>
       <h3 className="dashboard__section-title">Recent Trips</h3>
       <RequestCard
+        id="1"
         type="Return Trip"
         origin="Lagos"
         destination="Jos"
@@ -41,11 +42,16 @@ const Dashboard = () => {
         status="Approved"
       />
       <RequestCard
+        id="2"
         type="Return Trip"
         origin="New York"
         destination="New Jersey"
         date="24 Nov, 2020"
-        user={{ image: "https://res.cloudinary.com/store-manager/image/upload/v1571533873/barefoot-nomad/profile.jpg", name: "Dwayne Johnson" }}
+        user={{
+          image:
+            "https://res.cloudinary.com/store-manager/image/upload/v1571533873/barefoot-nomad/profile.jpg",
+          name: "Dwayne Johnson"
+        }}
         status="Approved"
       />
     </>

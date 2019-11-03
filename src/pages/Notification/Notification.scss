@@ -2,16 +2,15 @@
 @import "../../assets/mixin.scss";
 @import "../../assets/variable.scss";
 
-
 .notification-page {
-    width: rem(420px);
-    height: rem(400px);
-    background-color: white;
-    position: absolute;
-    right: rem(30px);
-    margin: rem(70px) rem(120px);
-    border-radius: rem(20px);
-    z-index: 1;
+  width: rem(420px);
+  height: rem(400px);
+  background-color: white;
+  position: absolute;
+  right: rem(30px);
+  margin: rem(70px) rem(120px);
+  border-radius: rem(20px);
+  z-index: 1;
 }
 
 @include md {
@@ -28,8 +27,8 @@
   .notification-page {
     width: rem(300px);
     height: rem(250px);
-    right: rem(-50px);
-    top: 30px;
+    right: rem(-80px);
+    top: rem(10px);
     border-radius: rem(10px);
   }
 }
