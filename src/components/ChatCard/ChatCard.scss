@@ -1,0 +1,83 @@
+@import "~sass-rem";
+@import "../../assets/variable.scss";
+@import "../../assets/mixin.scss";
+
+.chat {
+  &__header {
+    background-color: white;
+    height: rem(112px);
+    padding: rem(30px);
+    margin-bottom: rem(8px);
+
+    h3 {
+      font-family: Work Sans;
+      font-style: normal;
+      font-weight: bold;
+      font-size: rem(24px);
+      line-height: rem(28px);
+      color: black;
+    }
+
+    p {
+      font: rem(18px) normal 500;
+      line-height: rem(21px);
+      color: rgba(0, 0, 0, 0.4);
+    }
+    span {
+      margin-right: rem(5px);
+    }
+  }
+
+  &__section {
+    background-color: white;
+    height: rem(400px);
+  }
+
+  &__input-message {
+    width: 75%;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    color: white;
+    Input {
+      height: rem(70px);
+      background: lightgray;
+      margin-top: rem(85px)
+    }
+
+    input.input{
+      margin-bottom: rem(10px);
+      padding: rem(20px);
+    }
+  }
+
+  @include md {
+    &__input-message {
+      width: 95%;
+      Input {
+        height: rem(56px);
+        background: lightgray;
+        width: 100%;
+      }
+  
+      input.input{
+        margin-bottom: rem(10px);
+      }
+    }
+  }
+
+  @include sm {
+    &__input-message {
+      width: 90%;
+      Input {
+        height: rem(50px);
+        background: lightgray;
+        width: 100%;
+      }
+  
+      input.input{
+        margin-bottom: rem(10px);
+      }
+    }
+  }
+}

@@ -12,6 +12,7 @@ import Dashboard from "../Dashboard";
 import Trips from "./../Trips/index";
 import Notification from "../Notification/index";
 import RequestPage from "./../RequestPage/index";
+import Chat from '../Chat/index';
 
 const LoggedInPage = ({ history }) => {
   const [showSideNav, setShowSideNav] = useState(true);
@@ -59,6 +60,7 @@ const LoggedInPage = ({ history }) => {
                   path="/dashboard/trips/request/:id"
                   children={<RequestPage />}
                 />
+                <Route exact path="/dashboard/chat" component={Chat} />
                 <Route exact path="/dashboard/trips" component={Trips} />
                 <Route
                   exact
